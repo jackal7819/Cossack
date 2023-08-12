@@ -19,27 +19,21 @@ const Header = () => {
                 </Link>
             </div>
             <div className='flex items-center justify-start gap-14'>
-                <div className='flex items-center justify-center gap-px'>
-                    <Link
-                        className='text-base font-light leading-snug text-slate-100'
-                        to={'/'}>
-                        Каталог
-                    </Link>
-                </div>
-                <div className='flex items-center justify-center gap-px'>
-                    <Link
-                        className='text-base font-light leading-snug text-slate-100'
-                        to={'/'}>
-                        Про Cossack
-                    </Link>
-                </div>
-                <div className='flex items-center justify-center gap-px'>
-                    <Link
-                        className='text-base font-light leading-snug text-slate-100'
-                        to={'/'}>
-                        Підтримка
-                    </Link>
-                </div>
+                <Link
+                    className='text-base font-light leading-snug text-slate-100'
+                    to={'/'}>
+                    Каталог
+                </Link>
+                <Link
+                    className='text-base font-light leading-snug text-slate-100'
+                    to={'/'}>
+                    Про Cossack
+                </Link>
+                <Link
+                    className='text-base font-light leading-snug text-slate-100'
+                    to={'/'}>
+                    Підтримка
+                </Link>
             </div>
             <div className='flex items-center justify-start gap-6'>
                 <Link

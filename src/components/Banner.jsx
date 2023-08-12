@@ -1,92 +1,46 @@
+import '../index.css';
+
 import React from 'react';
+import search from '../assets/search.svg';
 
 const Banner = () => {
     return (
-        <div className='relative w-96 h-96'>
-            <img
-                className='w-96 h-96 left-[-0.16px] top-0 absolute'
-                src='https://via.placeholder.com/1440x800'
-            />
-            <div className='left-[391.50px] top-[232px] absolute flex-col justify-start items-center gap-10 inline-flex'>
-                <div className='flex flex-col items-center self-stretch justify-center h-32 gap-5'>
-                    <div>
-                        <span className='text-3xl font-bold leading-10 uppercase text-slate-100'>
-                            Геймплей,
-                        </span>
-                        <span className='text-3xl font-bold leading-10 uppercase text-red-50'>
-                            {' '}
-                        </span>
-                        <span className='text-3xl font-bold leading-10 text-yellow-400 uppercase'>
-                            наповнений
-                        </span>
-                        <span className='text-3xl font-bold leading-10 uppercase text-sky-300'>
-                            {' '}
-                        </span>
-                        <span className='text-3xl font-bold leading-10 uppercase text-sky-300'>
-                            душею!
-                        </span>
-                    </div>
-                    <div className='flex flex-col items-center justify-center gap-2'>
-                        <div>
-                            <span className='text-xl font-normal leading-7 text-red-50'>
-                                Каталог{' '}
-                            </span>
-                            <span className='text-xl font-normal leading-7 text-slate-100'>
-                                української
-                            </span>
-                            <span className='text-xl font-normal leading-7 text-red-50'>
-                                {' '}
-                                локалізації
-                            </span>
-                        </div>
-                        <div>
-                            <span className='text-xl font-normal leading-7 text-red-50'>
-                                Обирай і насолоджуйся{' '}
-                            </span>
-                            <span className='text-xl font-normal leading-7 text-slate-100'>
-                                українізованими
-                            </span>
-                            <span className='text-xl font-normal leading-7 text-red-50'>
-                                {' '}
-                                іграми
-                            </span>
-                        </div>
-                    </div>
+        <div className='flex items-center justify-center max-w-[1440px] h-[800px] m-auto bg-image'>
+            <div className='inline-flex flex-col items-center justify-start gap-10 tracking-widest text-slate-100'>
+                <div className='flex flex-col items-center self-stretch justify-center h-32'>
+                    <p className='mb-5 text-4xl font-bold uppercase'>
+                        Геймплей,
+                        <span className='text-yellow-400'> наповнений</span>
+                        <span className='text-sky-300'> душею!</span>
+                    </p>
+                    <p className='mb-2 text-xl'>
+                        Каталог української локалізації
+                    </p>
+                    <p className='text-xl'>
+                        Обирай і насолоджуйся українізованими іграми
+                    </p>
                 </div>
-                <div className='flex flex-col items-start self-stretch justify-center h-10 gap-2'>
-                    <div className='inline-flex items-center self-stretch justify-center gap-px px-4 py-3 bg-opacity-50 border border-opacity-50 rounded-lg h-11 bg-slate-300 border-slate-300'>
-                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                            <div className='text-xs font-medium leading-tight grow shrink basis-0 text-slate-100'>
-                                Введіть назву гри
-                            </div>
-                        </div>
-                        <div className='relative w-6 h-6' />
-                    </div>
+                <div class='flex items-center p-2 mb-2 w-full bg-opacity-50 border border-opacity-50 rounded-lg h-11 bg-slate-300 border-slate-300'>
+                    <input
+                        type='text'
+                        class='flex-grow outline-none px-4 text-xs font-medium leading-tight bg-transparent'
+                        placeholder='Введіть назву гри'
+                        value='Введіть назву гри'
+                    />
+                    <img src={search} alt='search' className='cursor-pointer' />
                 </div>
-                <div className='inline-flex items-start justify-start gap-20'>
-                    <div className='inline-flex flex-col items-center justify-center gap-4 px-4'>
-                        <div className='text-4xl font-bold leading-10 text-red-50'>
-                            1465
-                        </div>
-                        <div className='text-xl font-normal leading-7 text-red-50'>
-                            Офіційних
-                        </div>
+                <div className='flex gap-20 text-xl leading-7 text-red-50'>
+                    <div className='flex flex-col items-center justify-center gap-4'>
+                        <p className='text-4xl font-bold leading-10'>1465</p>
+                        <p>Офіційних</p>
                     </div>
-                    <div className='inline-flex flex-col items-center justify-center gap-4'>
-                        <div className='text-4xl font-bold leading-10 text-red-50'>
-                            28
-                        </div>
-                        <div className='text-xl font-normal leading-7 text-red-50'>
-                            Напівофіційних
-                        </div>
+                    <div className='flex flex-col items-center justify-center gap-4'>
+                        <p className='text-4xl font-bold leading-10'>28</p>
+                        <p>Напівофіційних</p>
                     </div>
-                    <div className='inline-flex flex-col items-center justify-center gap-4'>
-                        <div className='text-4xl font-bold leading-10 text-red-50'>
-                            248
-                        </div>
-                        <div className='text-xl font-normal leading-7 text-red-50'>
-                            Неофіційних
-                        </div>
+                    <div className='flex flex-col items-center justify-center gap-4'>
+                        <p className='text-4xl font-bold leading-10'>248</p>
+                        <p>Неофіційних</p>
                     </div>
                 </div>
             </div>
