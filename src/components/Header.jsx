@@ -5,7 +5,7 @@ import logo from '../assets/logo.svg';
 
 const Header = () => {
     return (
-        <header className='flex items-center justify-between px-20 py-2 bg-black max-w-[1440px] h-14 bg-opacity-80 gap-80 m-auto'>
+        <header className='flex items-center justify-between px-20 py-2 bg-black max-w-[1440px] h-14 bg-opacity-100 gap-80 m-auto text-slate-100'>
             <div className='flex items-center gap-2'>
                 <img
                     src={logo}
@@ -13,24 +13,24 @@ const Header = () => {
                     className='border rounded-full border-slate-600'
                 />
                 <Link
-                    className='text-base font-normal leading-snug text-slate-100'
+                    className='text-base font-normal leading-snug'
                     to={'/'}>
                     Cossack
                 </Link>
             </div>
             <div className='flex items-center justify-start gap-14'>
                 <Link
-                    className='text-base font-light leading-snug text-slate-100'
+                    className='text-base font-light leading-snug'
                     to={'/'}>
                     Каталог
                 </Link>
                 <Link
-                    className='text-base font-light leading-snug text-slate-100'
+                    className='text-base font-light leading-snug'
                     to={'/'}>
                     Про Cossack
                 </Link>
                 <Link
-                    className='text-base font-light leading-snug text-slate-100'
+                    className='text-base font-light leading-snug'
                     to={'/'}>
                     Підтримка
                 </Link>
@@ -41,9 +41,9 @@ const Header = () => {
                     to={'/'}>
                     <img src={heart} alt='heart' />
                 </Link>
-                <div className='flex items-start justify-start gap-px px-6 py-2 rounded-lg bg-sky-400'>
+                <div className='flex items-start justify-start gap-px px-6 py-2 rounded-lg bg-sky-600'>
                     <Link
-                        className='text-base font-light leading-snug text-white'
+                        className='text-base font-light leading-snug'
                         to={'/login'}>
                         Вхід
                     </Link>

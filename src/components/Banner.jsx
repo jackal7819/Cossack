@@ -5,7 +5,7 @@ import search from '../assets/search.svg';
 
 const Banner = () => {
     return (
-        <div className='flex items-center justify-center max-w-[1440px] h-[800px] m-auto bg-image'>
+        <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner'>
             <div className='inline-flex flex-col items-center justify-start gap-10 tracking-widest text-slate-100'>
                 <div className='flex flex-col items-center self-stretch justify-center h-32'>
                     <p className='mb-5 text-4xl font-bold uppercase'>

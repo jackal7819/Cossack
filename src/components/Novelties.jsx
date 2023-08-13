@@ -2,7 +2,7 @@ import React from 'react';
 
 const Novelties = () => {
     return (
-        <div className='inline-flex flex-col items-start justify-start gap-10 w-96 h-96'>
+        <div className='inline-flex flex-col items-start justify-start gap-10'>
             <div className='inline-flex items-center justify-start gap-2'>
                 <div className='text-xl font-normal leading-7 text-slate-100'>
                     Популярні новинки

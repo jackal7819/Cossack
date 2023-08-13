@@ -8,7 +8,16 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
-.bg-image {
-    background: url('cossack.webp'), lightgray 50% / cover no-repeat;
+.bg-banner {
+    background: url('cossack.webp');
     background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-footer {
+    background: url('footer.webp');
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
 }
