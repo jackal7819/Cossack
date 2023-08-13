@@ -9,14 +9,14 @@
 }
 
 .bg-banner {
-    background: url('cossack.webp');
+    background: url('./assets/cossack.webp');
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
     background-position: center;
 }
 
 .bg-footer {
-    background: url('footer.webp');
+    background: url('./assets/footer.webp');
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
     background-position: center;
