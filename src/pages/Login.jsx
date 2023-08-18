@@ -1,70 +1,57 @@
+import '../index.css';
+
+import { Link } from 'react-router-dom';
 import React from 'react';
+import google from '../assets/google.svg';
 
 const Login = () => {
     return (
-        <div className='inline-flex flex-col items-center justify-center gap-10 px-48 py-10 bg-opacity-50 w-96 h-96 bg-slate-300 rounded-3xl'>
-            <div className='inline-flex items-center justify-center gap-2'>
-                <div className='inline-flex flex-col items-start justify-start'>
-                    <div className='text-xl font-normal leading-7 text-slate-100'>
-                        Вхід
+        <div className='bg-footer max-w-[1440px] m-auto'>
+            <div className='flex items-center justify-center bg-black bg-opacity-50 h-screen-minus-menu '>
+                <div className='flex flex-col items-center gap-10 bg-opacity-50 py-14 rounded-3xl align-items-center bg-slate-300 px-28 text-slate-100'>
+                    <div className='flex items-center justify-center gap-2 text-xl'>
+                        <p className='underline underline-offset-8'>Вхід</p>
+                        <p>/</p>
+                        <Link to={'/registration'}>Реєстрація</Link>
                     </div>
-                    <div className='self-stretch h-px bg-neutral-300' />
-                </div>
-                <div className='inline-flex flex-col items-start justify-center gap-2'>
-                    <div className='text-xl font-normal leading-7 text-slate-100'>
-                        /
-                    </div>
-                </div>
-                <div className='flex items-start justify-start'>
-                    <div className='text-xl font-normal leading-7 text-slate-100'>
-                        Реєстрація
-                    </div>
-                </div>
-            </div>
-            <div className='flex flex-col items-center justify-center gap-5'>
-                <div className='flex flex-col items-start justify-center gap-2'>
-                    <div className='text-xs font-medium leading-tight text-slate-100'>
-                        E-mail
-                    </div>
-                    <div className='inline-flex items-center justify-start gap-px px-4 py-3 bg-opacity-50 border border-opacity-50 rounded-lg w-72 h-11 bg-slate-300 border-slate-300'>
-                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                            <div className='text-xs font-normal leading-tight text-opacity-50 grow shrink basis-0 text-slate-300'>
-                                Введіть ел.пошту
-                            </div>
+                    <form className='space-y-8 w-72'>
+                        <div>
+                            <label className='block mb-1' htmlFor='email'>
+                                E-mail
+                            </label>
+                            <input
+                                type='email'
+                                id='email'
+                                className='w-full px-4 py-3 border rounded-lg text-slate-400'
+                                placeholder='Введіть пошту'
+                            />
                         </div>
-                    </div>
-                </div>
-                <div className='flex flex-col items-start justify-center gap-2'>
-                    <div className='text-xs font-medium leading-tight text-slate-100'>
-                        Пароль
-                    </div>
-                    <div className='inline-flex items-center justify-start gap-px px-4 py-3 bg-opacity-50 border border-opacity-50 rounded-lg w-72 h-11 bg-slate-300 border-slate-300'>
-                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                            <div className='text-xs font-normal leading-tight text-opacity-50 grow shrink basis-0 text-slate-300'>
-                                Введіть пароль
-                            </div>
+                        <div>
+                            <label className='block mb-1' htmlFor='password'>
+                                Пароль
+                            </label>
+                            <input
+                                type='password'
+                                id='password'
+                                className='w-full px-4 py-3 border rounded-lg text-slate-400'
+                                placeholder='Введіть пароль'
+                            />
                         </div>
-                        <div className='relative w-6 h-6' />
-                    </div>
-                </div>
-            </div>
-            <div className='flex flex-col items-center justify-center gap-5'>
-                <div className='inline-flex items-center justify-center gap-px py-2 rounded-lg w-72 h-11 px-9 bg-sky-400'>
-                    <div className='text-base font-light leading-snug text-white'>
-                        Увійти
-                    </div>
-                </div>
-                <div className='inline-flex items-center justify-center gap-px py-2 border rounded-lg w-72 h-11 px-9 border-sky-400'>
-                    <div className='flex items-center justify-center gap-2'>
-                        <div className='text-base font-light leading-snug text-slate-100'>
-                            Вхід через Google
-                        </div>
-                    </div>
-                </div>
-                <div className='inline-flex items-center justify-center gap-px py-2 rounded-lg w-72 h-11 px-9'>
-                    <div className='text-lg font-normal leading-relaxed text-slate-100'>
-                        Не пам'ятаєшь пароль?
-                    </div>
+                        <button
+                            className='w-full px-4 py-3 rounded-lg bg-sky-400'
+                            type='submit'>
+                            Увійти
+                        </button>
+                        <button
+                            className='flex items-center justify-center w-full gap-2 px-4 py-3 border rounded-lg border-sky-400'
+                            type='button'>
+                            <img src={google} alt='google' />
+                            <Link to={'/'}>Вхід через Google</Link>
+                        </button>
+                        <p className='text-center'>
+                            <Link to='/'>Не пам'ятаєш пароль?</Link>
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>

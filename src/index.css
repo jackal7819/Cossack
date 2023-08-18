@@ -21,3 +21,7 @@
     background-size: cover;
     background-position: center;
 }
+
+.h-screen-minus-menu {
+    height: calc(100vh - 56px);
+}

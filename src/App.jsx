@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Registration from './pages/Registration';
+import Restore from './pages/Restore';
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
             { path: 'card', element: <FullCard /> },
             { path: 'profile', element: <Profile /> },
             { path: 'registration', element: <Registration /> },
+            { path: 'restore', element: <Restore /> },
         ],
     },
 ]);
