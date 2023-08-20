@@ -1,5 +1,6 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import Catalog from './pages/Catalog';
 import { Fragment } from 'react';
 import FullCard from './pages/FullCard';
 import Header from './components/Header';
@@ -22,11 +23,12 @@ const router = createBrowserRouter([
         ),
         children: [
             { index: true, element: <Home /> },
-            { path: 'login', element: <Login /> },
             { path: 'card', element: <FullCard /> },
             { path: 'profile', element: <Profile /> },
-            { path: 'registration', element: <Registration /> },
+            { path: 'login', element: <Login /> },
             { path: 'restore', element: <Restore /> },
+            { path: 'registration', element: <Registration /> },
+            { path: 'catalog', element: <Catalog /> },
         ],
     },
 ]);

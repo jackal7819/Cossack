@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className='bg-footer max-w-[1440px] m-auto'>
-            <div className='flex items-center justify-between pl-20 pr-20 bg-black bg-opacity-50 pt-72 text-slate-100 gap-80 '>
+            <div className='flex items-center justify-between pl-20 pr-20 bg-black bg-opacity-50 pt-72 text-slate-300 gap-80 '>
                 <div className='flex flex-col justify-center gap-4'>
                     <div className='flex items-center gap-2'>
                         <img

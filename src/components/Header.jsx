@@ -19,7 +19,7 @@ const Header = () => {
             <div className='flex items-center justify-start gap-14'>
                 <Link
                     className='text-base font-light leading-snug'
-                    to={'/'}>
+                    to={'/catalog'}>
                     Каталог
                 </Link>
                 <Link
@@ -39,13 +39,12 @@ const Header = () => {
                     to={'/profile'}>
                     <img src='src/assets/heart.svg' alt='heart' />
                 </Link>
-                <div className='flex items-start justify-start gap-px px-6 py-2 rounded-lg bg-sky-600'>
+                <button className='px-6 py-2 rounded-lg bg-sky-600'>
                     <Link
-                        className='text-base font-light leading-snug'
                         to={'/login'}>
                         Вхід
                     </Link>
-                </div>
+                </button>
             </div>
         </header>
     );
