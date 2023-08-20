@@ -6,7 +6,7 @@ const Header = () => {
         <header className='flex items-center justify-between px-20 py-2 bg-black max-w-[1440px] h-14 bg-opacity-100 gap-80 m-auto text-slate-100'>
             <div className='flex items-center gap-2'>
                 <img
-                    src='assets/logo.svg'
+                    src='/assets/logo.svg'
                     alt='logo'
                     className='border rounded-full border-slate-600'
                 />
@@ -37,7 +37,7 @@ const Header = () => {
                 <Link
                     className='flex items-center justify-center gap-px'
                     to={'/profile'}>
-                    <img src='assets/heart.svg' alt='heart' />
+                    <img src='/assets/heart.svg' alt='heart' />
                 </Link>
                 <button className='px-6 py-2 rounded-lg bg-sky-600'>
                     <Link

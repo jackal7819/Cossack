@@ -68,7 +68,7 @@ const Registration = () => {
                         <button
                             className='flex items-center justify-center w-full gap-2 px-4 py-3 border rounded-lg border-sky-400'
                             type='button'>
-                            <img src='assets/google.svg' alt='google' />
+                            <img src='/assets/google.svg' alt='google' />
                             <Link to={'/'}>Вхід через Google</Link>
                         </button>
                     </form>

@@ -41,7 +41,7 @@ const Bestsellers = () => {
         <div className='flex flex-col gap-10 text-slate-100'>
             <div className='flex items-center gap-2'>
                 <h2 className='text-xl'>Бестселери</h2>
-                <img src='assets/bigger.svg' alt='bigger' />
+                <img src='/assets/bigger.svg' alt='bigger' />
             </div>
             <div className='flex gap-5'>
                 {games.map((game) => (

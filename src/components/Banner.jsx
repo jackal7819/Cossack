@@ -26,7 +26,7 @@ const Banner = () => {
                         placeholder='Введіть назву гри'
                         value='Введіть назву гри'
                     />
-                    <img src='assets/search.svg' alt='search' className='cursor-pointer' />
+                    <img src='/assets/search.svg' alt='search' className='cursor-pointer' />
                 </div>
                 <div className='flex gap-20 text-xl leading-7 text-red-50'>
                     <div className='flex flex-col items-center justify-center gap-4'>

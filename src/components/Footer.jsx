@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='flex flex-col justify-center gap-4'>
                     <div className='flex items-center gap-2'>
                         <img
-                            src='assets/logo.svg'
+                            src='/assets/logo.svg'
                             alt='logo'
                             className='border rounded-full border-slate-600'
                         />
