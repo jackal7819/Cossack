@@ -8,6 +8,10 @@
     font-family: 'Fira Sans', sans-serif;
 }
 
+body {
+    background-color: rgb(15 23 42);
+}
+
 .bg-banner {
     background: url('./assets/cossack.webp');
     background-color: rgba(0, 0, 0, 0.6);
@@ -24,4 +28,8 @@
 
 .h-screen-minus-menu {
     height: calc(100vh - 56px);
+}
+
+.min-h-screen-minus-menu {
+    min-height: calc(100vh - 56px);
 }

@@ -1,45 +1,28 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
-const Card = () => {
+const Card = ({ title, company, year, rating, image }) => {
     return (
-        <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 h-96 bg-slate-300 bg-opacity-20 border-slate-100'>
-            <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                <img
-                    className='rounded-md w-72 h-72'
-                    src='https://via.placeholder.com/281x294'
-                />
-            </div>
-            <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                    <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                        Hogwarts Legacy
+        <div className='flex flex-col border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
+            <Link to='/card' className='flex px-3 pt-3'>
+                <img className='w-full rounded-md' src={image} />
+            </Link>
+            <div className='flex flex-col self-stretch px-3 py-6 h-36'>
+                <div className='flex flex-col self-stretch h-24 gap-4 text-slate-100'>
+                    <div className='font-bold'>{title}</div>
+                    <div className='flex justify-between gap-4 text-xs font-medium text-center uppercase'>
+                        <p>{company}</p>
+                        <p>{year}</p>
                     </div>
-                    <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                        <div className='flex items-start justify-start gap-px rounded-md'>
-                            <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                Avalanche Software
-                            </div>
-                        </div>
-                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                            2023
-                        </div>
-                    </div>
-                    <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                            <div className='text-sm font-light leading-tight text-sky-300'>
-                                89/100
-                            </div>
-                        </div>
-                        <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                            <div className='flex items-center justify-center gap-px'>
-                                <div className='relative w-5 h-5' />
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                            <div className='relative w-5 h-4'>
-                                <div className='absolute top-0 left-0 w-5 h-4'></div>
-                            </div>
-                        </div>
+                    <div className='flex items-center justify-between gap-4'>
+                        <span className='flex flex-row gap-1'>
+                            <img src={'src/assets/star.svg'} alt='star' />
+                            <p className='flex mt-1 font-light text-sky-300'>
+                                {rating}/100
+                            </p>
+                        </span>
+                        <img src={'src/assets/heart.svg'} alt='heart' />
+                        <img src={'src/assets/crown.svg'} alt='crown' />
                     </div>
                 </div>
             </div>

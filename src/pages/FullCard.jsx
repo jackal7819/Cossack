@@ -2,7 +2,7 @@ import React from 'react';
 
 const FullCard = () => {
     return (
-        <div className='inline-flex flex-col items-center justify-start gap-48 w-96 h-96'>
+        <div className='flex flex-col items-center gap-48 max-w-[1440px] m-auto'>
             <div className='flex flex-col items-start justify-start gap-20'>
                 <div className='inline-flex items-start justify-start gap-5'>
                     <div className='inline-flex flex-col items-start justify-start gap-10'>

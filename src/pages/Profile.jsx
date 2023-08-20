@@ -1,173 +1,118 @@
+import '../index.css';
+
+import Card from '../components/Card';
+import { Link } from 'react-router-dom';
 import React from 'react';
+
+const games = [
+    {
+        id: 1,
+        title: 'The Witcher 3 - Wild Hunt',
+        company: 'CD Project Red',
+        year: 2015,
+        rating: 92,
+        image: 'src/assets/witcher.jpg',
+    },
+    {
+        id: 2,
+        title: 'Hogwarts Legacy',
+        company: 'Avalanche Software',
+        year: 2022,
+        rating: 89,
+        image: 'src/assets/hogwarts.jpg',
+    },
+    {
+        id: 3,
+        title: 'The Elder Scrolls V: Skyrim',
+        company: 'Bethesda Game Studios',
+        year: 2014,
+        rating: 95,
+        image: 'src/assets/skyrim.jpg',
+    },
+    {
+        id: 4,
+        title: 'Control - Ultimate Edition',
+        company: 'Remedy Entertainment',
+        year: 2018,
+        rating: 81,
+        image: 'src/assets/control.jpg',
+    },
+];
 
 const Profile = () => {
     return (
-        <div className='inline-flex flex-col items-start justify-start gap-10 w-96 h-96'>
-            <div className='inline-flex items-center justify-start gap-96'>
-                <div className='flex items-center justify-start gap-5'>
-                    <img
-                        className='w-20 h-20 rounded-full'
-                        src='https://via.placeholder.com/88x88'
-                    />
-                    <div className='inline-flex flex-col items-start justify-start gap-2'>
-                        <div className='text-base font-bold leading-snug text-slate-100'>
-                            Artur723
+        <div className='bg-footer max-w-[1440px] m-auto'>
+            <div className='flex flex-col justify-between bg-black bg-opacity-50 min-h-screen-minus-menu'>
+                <div className='flex flex-col gap-10 p-20 text-slate-100 '>
+                    <div className='flex items-center justify-between gap-10'>
+                        <div className='flex items-center justify-between gap-5'>
+                            <img
+                                className='w-20 h-20 rounded-full'
+                                src='src/assets/photo.jpg'
+                            />
+                            <p>Artur723</p>
+                            <img src='src/assets/pencil.svg' alt='pencil' />
                         </div>
-                    </div>
-                    <div className='relative w-6 h-6' />
-                </div>
-                <div className='flex items-center justify-center gap-px py-2 border rounded-lg px-9 border-rose-900'>
-                    <div className='flex items-center justify-center gap-2'>
-                        <div className='text-base font-light leading-snug text-slate-100'>
+                        <button className='py-2 border rounded-lg px-9 border-rose-900'>
                             Видалити профіль
-                        </div>
+                        </button>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <p className='underline underline-offset-4'>Улюблене</p>
+                        <p className='text-xl'>/</p>
+                        <p>Нещодавно переглянуті</p>
+                    </div>
+                    <div className='flex gap-5'>
+                        {games.map((game) => (
+                            <Card key={games.id} {...game} />
+                        ))}
                     </div>
                 </div>
-            </div>
-            <div className='flex flex-col items-start justify-start gap-10'>
-                <div className='inline-flex items-center justify-center gap-2'>
-                    <div className='inline-flex flex-col items-start justify-start'>
-                        <div className='text-base font-light leading-snug text-slate-100'>
-                            Улюблене
-                        </div>
-                        <div className='self-stretch h-px bg-slate-100' />
-                    </div>
-                    <div className='inline-flex flex-col items-start justify-center gap-2'>
-                        <div className='text-xl font-normal leading-7 text-slate-100'>
-                            /
-                        </div>
-                    </div>
-                    <div className='flex items-start justify-start'>
-                        <div className='text-base font-light leading-snug text-slate-100'>
-                            Нещодавно переглянуті
-                        </div>
-                    </div>
-                </div>
-                <div className='inline-flex items-start justify-start gap-5'>
-                    <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                        <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
+                <div className='flex items-center justify-between pl-20 pr-20 pt-72 text-slate-100 gap-80 '>
+                    <div className='flex flex-col justify-center gap-4'>
+                        <div className='flex items-center gap-2'>
                             <img
-                                className='rounded-md w-72 h-72'
-                                src='https://via.placeholder.com/281x294'
+                                src='src/assets/logo.svg'
+                                alt='logo'
+                                className='border rounded-full border-slate-600'
                             />
+                            <Link to={'/'}>Cossack</Link>
                         </div>
-                        <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                            <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                    The Elder Scrolls V: Skyrim
-                                </div>
-                                <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                    <div className='flex items-start justify-start gap-px rounded-md'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            Bethesda Game Studios
-                                        </div>
-                                    </div>
-                                    <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                        2011
-                                    </div>
-                                </div>
-                                <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                    <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                        <div className='text-sm font-light leading-tight text-sky-300'>
-                                            95/100
-                                        </div>
-                                    </div>
-                                    <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                        <div className='flex items-center justify-center gap-px'>
-                                            <div className='relative w-5 h-5' />
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                        <div className='relative w-5 h-4'>
-                                            <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className='flex gap-4'>
+                            <Link
+                                to={'https://www.facebook.com/'}
+                                target='_blank'
+                                rel='noopener noreferrer'>
+                                Facebook
+                            </Link>
+                            <Link
+                                to={'https://www.twitter.com/'}
+                                target='_blank'
+                                rel='noopener noreferrer'>
+                                Twitter
+                            </Link>
+                            <Link
+                                to={'https://web.telegram.org/a/'}
+                                target='_blank'
+                                rel='noopener noreferrer'>
+                                Telegram
+                            </Link>
                         </div>
                     </div>
-                    <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                        <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                            <img
-                                className='rounded-md w-72 h-72'
-                                src='https://via.placeholder.com/281x294'
-                            />
-                        </div>
-                        <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                            <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                    Hogwarts Legacy
-                                </div>
-                                <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                    <div className='flex items-start justify-start gap-px rounded-md'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            Avalanche Software
-                                        </div>
-                                    </div>
-                                    <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                        2023
-                                    </div>
-                                </div>
-                                <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                    <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                        <div className='text-sm font-light leading-tight text-sky-300'>
-                                            89/100
-                                        </div>
-                                    </div>
-                                    <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                        <div className='flex items-center justify-center gap-px'>
-                                            <div className='relative w-5 h-5' />
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                        <div className='relative w-5 h-4'>
-                                            <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div className='flex justify-between gap-20 p-20 border-t border-l border-r rounded-tl-lg rounded-tr-lg border-slate-100'>
+                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                            <div className='inline-flex items-center justify-center gap-px'>
+                                <Link to={'/'}>Категорії</Link>
                             </div>
+                            <Link to={'/'}>Новинки ігор</Link>
                         </div>
-                    </div>
-                    <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                        <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                            <img
-                                className='rounded-md w-72 h-72'
-                                src='https://via.placeholder.com/281x294'
-                            />
+                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                            <Link to={'/'}>Новини</Link>
+                            <Link to={'/'}>Профіль</Link>
                         </div>
-                        <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                            <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                    Control Ultimate Edition
-                                </div>
-                                <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                    <div className='flex items-start justify-start gap-px rounded-md'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            Remedy Entertainment
-                                        </div>
-                                    </div>
-                                    <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                        2020
-                                    </div>
-                                </div>
-                                <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                    <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                        <div className='text-sm font-light leading-tight text-sky-300'>
-                                            81/100
-                                        </div>
-                                    </div>
-                                    <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                        <div className='flex items-center justify-center gap-px'>
-                                            <div className='relative w-5 h-5' />
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                        <div className='relative w-5 h-4'>
-                                            <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                            <Link to={'/'}>Про Cossack</Link>
+                            <Link to={'/'}>Підтримка</Link>
                         </div>
                     </div>
                 </div>

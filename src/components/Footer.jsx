@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import logo from '../assets/logo.svg';
 
 const Footer = () => {
     return (
-        <footer className='bg-footer max-w-[1440px] m-auto mt-[-50px]'>
+        <footer className='bg-footer max-w-[1440px] m-auto'>
             <div className='flex items-center justify-between pl-20 pr-20 bg-black bg-opacity-50 pt-72 text-slate-100 gap-80 '>
                 <div className='flex flex-col justify-center gap-4'>
                     <div className='flex items-center gap-2'>
                         <img
-                            src={logo}
+                            src='src/assets/logo.svg'
                             alt='logo'
                             className='border rounded-full border-slate-600'
                         />

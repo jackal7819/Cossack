@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import heart from '../assets/heart.svg';
-import logo from '../assets/logo.svg';
 
 const Header = () => {
     return (
         <header className='flex items-center justify-between px-20 py-2 bg-black max-w-[1440px] h-14 bg-opacity-100 gap-80 m-auto text-slate-100'>
             <div className='flex items-center gap-2'>
                 <img
-                    src={logo}
+                    src='src/assets/logo.svg'
                     alt='logo'
                     className='border rounded-full border-slate-600'
                 />
@@ -38,8 +36,8 @@ const Header = () => {
             <div className='flex items-center justify-start gap-6'>
                 <Link
                     className='flex items-center justify-center gap-px'
-                    to={'/'}>
-                    <img src={heart} alt='heart' />
+                    to={'/profile'}>
+                    <img src='src/assets/heart.svg' alt='heart' />
                 </Link>
                 <div className='flex items-start justify-start gap-px px-6 py-2 rounded-lg bg-sky-600'>
                     <Link
