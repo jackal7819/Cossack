@@ -8,7 +8,7 @@ const games = [
         company: 'CD Project Red',
         year: 2015,
         rating: 92,
-        image: 'src/assets/witcher.jpg',
+        image: '../assets/witcher.jpg',
     },
     {
         id: 2,
