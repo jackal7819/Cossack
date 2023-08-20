@@ -1,49 +1,77 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import Card from '../components/Card';
+import Footer from '../components/Footer';
+
+const games = [
+    {
+        id: 1,
+        title: 'The Witcher 3 - Wild Hunt',
+        company: 'CD Project Red',
+        year: 2015,
+        rating: 92,
+        image: 'src/assets/witcher.jpg',
+    },
+    {
+        id: 2,
+        title: 'Hogwarts Legacy',
+        company: 'Avalanche Software',
+        year: 2022,
+        rating: 89,
+        image: 'src/assets/hogwarts.jpg',
+    },
+    {
+        id: 3,
+        title: 'The Elder Scrolls V: Skyrim',
+        company: 'Bethesda Game Studios',
+        year: 2014,
+        rating: 95,
+        image: 'src/assets/skyrim.jpg',
+    },
+    {
+        id: 4,
+        title: 'Control - Ultimate Edition',
+        company: 'Remedy Entertainment',
+        year: 2018,
+        rating: 81,
+        image: 'src/assets/control.jpg',
+    },
+];
 
 const FullCard = () => {
     return (
-        <div className='flex flex-col items-center gap-48 max-w-[1440px] m-auto'>
-            <div className='flex flex-col items-start justify-start gap-20'>
-                <div className='inline-flex items-start justify-start gap-5'>
-                    <div className='inline-flex flex-col items-start justify-start gap-10'>
-                        <div className='flex flex-col items-start justify-start gap-5'>
+        <Fragment>
+            <div className='flex flex-col items-center gap-48 bg-black max-w-[1440px] bg-opacity-50 m-auto text-slate-100 pl-20 pr-20 pt-20'>
+                <div className='flex flex-col gap-10'>
+                    <h2 className='text-3xl font-bold uppercase'>
+                        The Witcher 3: Wild Hunt
+                    </h2>
+                    <div className='flex gap-5'>
+                        <div className='flex flex-col gap-10'>
                             <img
-                                className='rounded-lg w-96 h-96'
-                                src='https://via.placeholder.com/847x369'
+                                className='rounded-lg'
+                                src='src/assets/witcher0.jpg'
                             />
-                            <div className='inline-flex items-start justify-start gap-5'>
-                                <div className='relative w-48 h-36'>
-                                    <img
-                                        className='w-48 h-36 left-[2px] top-[-0.05px] absolute rounded-md'
-                                        src='https://via.placeholder.com/193x139'
-                                    />
-                                </div>
-                                <div className='relative w-48 h-36'>
-                                    <img
-                                        className='absolute top-0 left-0 w-48 rounded-lg h-36'
-                                        src='https://via.placeholder.com/197x140'
-                                    />
-                                </div>
-                                <div className='relative w-48 h-36'>
-                                    <img
-                                        className='absolute top-0 left-0 w-48 rounded-lg h-36'
-                                        src='https://via.placeholder.com/197x140'
-                                    />
-                                    <div className='w-10 h-7 left-[78.50px] top-[54.59px] absolute'>
-                                        <div className='absolute top-0 left-0 w-10 rounded h-7 bg-zinc-700' />
-                                    </div>
-                                </div>
-                                <div className='relative w-48 h-36'>
-                                    <img
-                                        className='absolute top-0 left-0 w-48 rounded-lg h-36'
-                                        src='https://via.placeholder.com/197x140'
-                                    />
-                                </div>
+                            <div className='flex justify-between gap-5'>
+                                <img
+                                    className='rounded-lg'
+                                    src='src/assets/witcher1.jpg'
+                                />
+                                <img
+                                    className='rounded-lg'
+                                    src='src/assets/witcher2.jpg'
+                                />
+                                <img
+                                    className='rounded-lg'
+                                    src='src/assets/witcher3.jpg'
+                                />
+                                <img
+                                    className='rounded-lg'
+                                    src='src/assets/witcher4.jpg'
+                                />
                             </div>
-                        </div>
-                        <div className='flex flex-col items-start justify-start gap-10'>
-                            <div className='flex flex-col items-start justify-start h-48 gap-6'>
-                                <div className='self-stretch text-base font-light leading-snug text-slate-100'>
+                            <div className='flex flex-col gap-10'>
+                                <p>
                                     The Witcher 3: Wild Hunt - комп'ютерна
                                     рольова гра за мотивами серії романів
                                     "Відьмак" польського письменника Анджея
@@ -62,216 +90,274 @@ const FullCard = () => {
                                     небезпечну подорож розореними війною
                                     землями, щоб знайти Цирі та розтрощити Дике
                                     Полювання раз і назавжди.
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-start justify-start gap-10'>
-                                <div className='text-xl font-normal leading-7 text-slate-100'>
-                                    Коментарії та відгуки
-                                </div>
-                                <div className='flex flex-col items-start justify-start gap-10'>
-                                    <div className='flex flex-col items-start justify-start h-56 gap-5'>
-                                        <div className='inline-flex items-center justify-start gap-5'>
-                                            <div className='flex items-center justify-start h-10 gap-2'>
-                                                <img
-                                                    className='w-10 h-10 rounded-full'
-                                                    src='https://via.placeholder.com/42x42'
-                                                />
-                                                <div className='inline-flex flex-col items-start justify-start gap-2'>
-                                                    <div className='text-base font-bold leading-snug text-slate-100'>
-                                                        YOU
-                                                    </div>
+                                </p>
+                                <div className='flex flex-col gap-10'>
+                                    <p className='text-xl'>
+                                        Коментарії та відгуки
+                                    </p>
+                                    <div className='flex flex-col gap-10'>
+                                        <div className='flex flex-col gap-5'>
+                                            <div className='flex items-center gap-20'>
+                                                <div className='flex items-center gap-2'>
+                                                    <img
+                                                        className='w-10 h-10 rounded-full'
+                                                        src='src/assets/photo.jpg'
+                                                    />
+                                                    <p className='font-bold'>
+                                                        Michael
+                                                    </p>
+                                                </div>
+                                                <div className='flex gap-1'>
+                                                    <img
+                                                        src='src/assets/star-full.svg'
+                                                        alt='star'
+                                                    />
+                                                    <img
+                                                        src='src/assets/star-full.svg'
+                                                        alt='star'
+                                                    />
+                                                    <img
+                                                        src='src/assets/star-full.svg'
+                                                        alt='star'
+                                                    />
+                                                    <img
+                                                        src='src/assets/star-empty.svg'
+                                                        alt='star'
+                                                    />
+                                                    <img
+                                                        src='src/assets/star-empty.svg'
+                                                        alt='star'
+                                                    />
                                                 </div>
                                             </div>
-                                            <div className='flex items-start justify-start gap-1'>
-                                                <div className='relative w-6 h-6' />
-                                                <div className='relative w-6 h-6' />
-                                                <div className='relative w-6 h-6' />
-                                            </div>
+                                            <form className='flex flex-col w-4/5 gap-5 ml-auto'>
+                                                <textarea
+                                                    className='w-full h-24 px-4 py-3 text-xs leading-tight bg-opacity-50 border border-opacity-50 rounded-lg placeholder-slate-200 bg-slate-300 border-slate-300'
+                                                    placeholder='Поділися своїм враженням про гру...'
+                                                    value='Поділися своїм враженням про гру...'
+                                                />
+                                                <button
+                                                    type='submit'
+                                                    className='py-2 border rounded-lg w-60 px-9 border-sky-400'>
+                                                    Додати коментар
+                                                </button>
+                                            </form>
                                         </div>
-                                        <div className='flex flex-col items-start self-stretch justify-start h-40 gap-5 pl-56'>
-                                            <div className='flex flex-col items-start justify-start h-24 gap-2 w-96'>
-                                                <div className='inline-flex items-start self-stretch justify-start gap-px px-4 py-3 bg-opacity-50 border border-opacity-50 rounded-lg grow shrink basis-0 bg-slate-300 border-slate-300'>
-                                                    <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                                        <div className='text-xs font-normal leading-tight grow shrink basis-0 text-slate-100'>
-                                                            Поділися своїм
-                                                            враженням про гру...
+                                        <div className='flex flex-col gap-5'>
+                                            <div className='flex gap-5'>
+                                                <div className='flex gap-2'>
+                                                    <img
+                                                        className='w-10 h-10 rounded-full'
+                                                        src='src/assets/photoa.jpg'
+                                                    />
+                                                    <div className='flex flex-col gap-2'>
+                                                        <div className='font-bold'>
+                                                            Adam76
+                                                        </div>
+                                                        <div className='flex gap-1'>
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <p className='w-4/5 ml-auto text-xs'>
+                                                    Я люблю Відьмак 3, але
+                                                    тільки якщо прибрати з гри
+                                                    вплив Цирі. Ось, ну не
+                                                    полюбив я її, ось і все.
+                                                    Вважай вся книжкова сага
+                                                    була про неї, а тепер і
+                                                    майже весь сюжет третьої
+                                                    частини. Гра гарна, але Цирі
+                                                    дуже сильно вбиває її, вже
+                                                    вибачте.
+                                                </p>
                                             </div>
-                                            <div className='inline-flex items-center justify-center gap-px py-2 border rounded-lg w-60 px-9 border-sky-400'>
-                                                <div className='flex items-center justify-center gap-2'>
-                                                    <div className='text-base font-light leading-snug text-white'>
-                                                        Додати коментар
+                                            <div className='flex gap-5'>
+                                                <div className='flex gap-2'>
+                                                    <img
+                                                        className='w-10 h-10 rounded-full'
+                                                        src='src/assets/photon.jpg'
+                                                    />
+                                                    <div className='flex flex-col gap-2'>
+                                                        <div className='font-bold'>
+                                                            Norbert
+                                                        </div>
+                                                        <div className='flex gap-1'>
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <p className='w-4/5 ml-auto text-xs'>
+                                                    Практично ідеальна рпг, яка
+                                                    задала планку якості на 15
+                                                    років вперед. Поки що ми
+                                                    можемо бачити те, що досі
+                                                    нікому не вдалося навіть
+                                                    наблизитися до настільки
+                                                    сильної гри. Були жалюгідні
+                                                    потуги асасинів, але нікому
+                                                    це поки не під силу.
+                                                </p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div className='flex flex-col items-start self-stretch justify-start gap-5 h-72'>
-                                        <div className='inline-flex items-start self-stretch justify-start gap-5'>
-                                            <div className='flex items-start justify-start h-10 gap-2'>
-                                                <img
-                                                    className='w-10 h-10 rounded-full'
-                                                    src='https://via.placeholder.com/42x42'
-                                                />
-                                                <div className='inline-flex flex-col items-start justify-start gap-2'>
-                                                    <div className='text-base font-bold leading-snug text-slate-100'>
-                                                        Adam76
-                                                    </div>
-                                                    <div className='inline-flex items-start justify-start gap-1' />
-                                                </div>
-                                            </div>
-                                            <div className='text-xs font-normal leading-tight grow shrink basis-0 text-slate-100'>
-                                                Я люблю Відьмак 3, але тільки
-                                                якщо прибрати з гри вплив Цирі.
-                                                Ось, ну не полюбив я її, ось і
-                                                все. Вважай вся книжкова сага
-                                                була про неї, а тепер і майже
-                                                весь сюжет третьої частини. Гра
-                                                гарна, але Цирі дуже сильно
-                                                вбиває її, вже вибачте
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex items-start self-stretch justify-start gap-5'>
-                                            <div className='flex items-start justify-start h-10 gap-2'>
-                                                <img
-                                                    className='w-10 h-10 rounded-full'
-                                                    src='https://via.placeholder.com/42x42'
-                                                />
-                                                <div className='inline-flex flex-col items-start justify-start gap-2'>
-                                                    <div className='text-base font-bold leading-snug text-slate-100'>
-                                                        Norbert
-                                                    </div>
-                                                    <div className='inline-flex items-start justify-start gap-1'>
-                                                        <div className='relative w-3 h-3' />
-                                                        <div className='relative w-3 h-3' />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='text-xs font-normal leading-tight grow shrink basis-0 text-slate-100'>
-                                                У світі відьмака настільки все
-                                                добре гармонує одне з одним, що
-                                                занурюєшся в нього всією душею.
-                                                Особливо хочеться відзначити
-                                                чудовий звуковий супровід у грі.
-                                                команда, яка працювала над ним,
-                                                - великі молодці. у кожній
-                                                локації є своя звукова доріжка,
-                                                яка прямо таки передає настрій
-                                                кожної місцевості.
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex items-start self-stretch justify-start gap-5'>
-                                            <div className='flex items-start justify-start h-10 gap-2'>
-                                                <img
-                                                    className='w-10 h-10 rounded-full'
-                                                    src='https://via.placeholder.com/42x42'
-                                                />
-                                                <div className='inline-flex flex-col items-start justify-start gap-2'>
-                                                    <div className='text-base font-bold leading-snug text-slate-100'>
-                                                        Michal3
-                                                    </div>
-                                                    <div className='inline-flex items-start justify-start gap-1'>
-                                                        <div className='relative w-3 h-3' />
+                                            <div className='flex gap-5'>
+                                                <div className='flex gap-2'>
+                                                    <img
+                                                        className='w-10 h-10 rounded-full'
+                                                        src='src/assets/photom.jpg'
+                                                    />
+                                                    <div className='flex flex-col gap-2'>
+                                                        <div className='font-bold'>
+                                                            Michal3
+                                                        </div>
+                                                        <div className='flex gap-1'>
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-full.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                            <img
+                                                                className='w-3'
+                                                                src='src/assets/star-empty.svg'
+                                                                alt='star'
+                                                            />
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <p className='w-4/5 ml-auto text-xs'>
+                                                    У світі відьмака настільки
+                                                    все добре гармонує одне з
+                                                    одним, що занурюєшся в нього
+                                                    всією душею. Особливо
+                                                    хочеться відзначити чудовий
+                                                    звуковий супровід у грі.
+                                                    команда, яка працювала над
+                                                    ним, - великі молодці. у
+                                                    кожній локації є своя
+                                                    звукова доріжка, яка прямо
+                                                    таки передає настрій кожної
+                                                    місцевості.
+                                                </p>
                                             </div>
-                                            <div className='text-xs font-normal leading-tight grow shrink basis-0 text-slate-100'>
-                                                Практично ідеальна рпг, яка
-                                                задала планку якості на 15 років
-                                                вперед. Поки що ми можемо бачити
-                                                те, що досі нікому не вдалося
-                                                навіть наблизитися до настільки
-                                                сильної гри. Були жалюгідні
-                                                потуги асасинів, але нікому це
-                                                поки не під силу.
-                                            </div>
-                                        </div>
-                                        <div className='flex flex-col items-start justify-start gap-px pl-56'>
-                                            <div className='inline-flex items-center justify-center gap-px py-2 border rounded-lg px-9 border-sky-400'>
-                                                <div className='flex items-center justify-center gap-2'>
-                                                    <div className='text-base font-light leading-snug text-slate-100'>
-                                                        Розгорнути всі (23){' '}
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <button className='py-2 ml-48 border rounded-lg w-60 px-9 border-sky-400'>
+                                                Розгорнути всі (23)
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='inline-flex flex-col items-start justify-start gap-10'>
-                        <div className='flex flex-col items-start justify-start h-64 gap-4'>
-                            <div className='inline-flex items-start justify-start gap-5'>
-                                <div className='inline-flex flex-col items-start justify-start gap-4'>
-                                    <div className='text-base font-light leading-snug w-28 text-slate-100'>
-                                        Розробник:
+                        <div className='flex flex-col gap-10'>
+                            <div className='flex flex-col gap-4 font-light'>
+                                <div className='flex gap-5'>
+                                    <div className='flex flex-col gap-4'>
+                                        <p>Розробник:</p>
+                                        <p>Дата виходу:</p>
+                                        <p>Локалізація:</p>
                                     </div>
-                                    <div className='text-base font-light leading-snug text-slate-100'>
-                                        Дата виходу:
-                                    </div>
-                                    <div className='text-base font-light leading-snug w-28 text-slate-100'>
-                                        Локалізація
-                                    </div>
-                                </div>
-                                <div className='inline-flex flex-col items-start justify-start gap-4'>
-                                    <div className='text-base font-light leading-snug text-slate-100'>
-                                        CD PROJEKT RED
-                                    </div>
-                                    <div className='text-base font-light leading-snug text-slate-100'>
-                                        2023
-                                    </div>
-                                    <div className='text-base font-light leading-snug text-slate-100'>
-                                        Субтітри
+                                    <div className='flex flex-col gap-4'>
+                                        <p>CD PROJEKT RED</p>
+                                        <p>2023</p>
+                                        <p>Субтітри</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='inline-flex items-start justify-start gap-5'>
-                                <div className='text-base font-light leading-snug w-28 text-slate-100'>
-                                    Платформи:
+                                <div className='flex gap-5'>
+                                    <p>Платформи:</p>
+                                    <div className='flex gap-3'>
+                                        <img
+                                            src='src/assets/xbox.svg'
+                                            alt='xbox'
+                                        />
+                                        <img
+                                            src='src/assets/nintendo.svg'
+                                            alt='nintendo'
+                                        />
+                                        <img src='src/assets/pc.svg' alt='pc' />
+                                        <img
+                                            src='src/assets/playstation.svg'
+                                            alt='playstation'
+                                        />
+                                    </div>
                                 </div>
-                                <div className='flex items-start justify-start gap-3 p-px'>
-                                    <div className='relative w-6 h-6'>
-                                        <div className='w-2 h-2.5 left-[3.77px] top-[1.79px] absolute'></div>
-                                        <div className='w-2.5 h-5 left-[11.97px] top-[1.79px] absolute'>
-                                            <div className='origin-top-left rotate-180 w-2 h-2.5 left-[8.24px] top-[-0px] absolute'></div>
+                                <div className='flex gap-12'>
+                                    <p>Рейтинг:</p>
+                                    <p className='text-sky-300'>92/100</p>
+                                </div>
+                                <div className='flex flex-col gap-4'>
+                                    <p className='w-[335px]'>
+                                        Популярні мітки для цього продукту:
+                                    </p>
+                                    <div className='flex flex-wrap gap-3 text-xs font-medium leading-none text-center uppercase text-slate-100'>
+                                        <div className='px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
+                                            <p>Рольова гра</p>
                                         </div>
-                                    </div>
-                                    <div className='relative w-6 h-6' />
-                                    <div className='relative w-6 h-6'>
-                                        <div className='absolute top-0 left-0 w-6 h-6'></div>
-                                    </div>
-                                    <div className='relative w-6 h-6' />
-                                </div>
-                            </div>
-                            <div className='inline-flex items-center justify-start gap-5'>
-                                <div className='text-base font-light leading-snug w-28 text-slate-100'>
-                                    Рейтинг:
-                                </div>
-                                <div className='text-base font-light leading-snug text-sky-300'>
-                                    92/100
-                                </div>
-                            </div>
-                            <div className='flex flex-col items-start justify-start gap-4'>
-                                <div className='text-base font-light leading-snug text-slate-100'>
-                                    Популярні мітки для цього продукту:
-                                </div>
-                                <div className='inline-flex items-start justify-start gap-3'>
-                                    <div className='flex items-start justify-start gap-px px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            Рольова гра
+                                        <div className='px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
+                                            <p>Бойовик</p>
                                         </div>
-                                    </div>
-                                    <div className='flex items-start justify-start gap-px px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            БОЙОВИК
-                                        </div>
-                                    </div>
-                                    <div className='flex items-start justify-start gap-px px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            ВІДКРИТИЙ СВІТ
+                                        <div className='px-3 py-1 border rounded-md bg-zinc-700 border-zinc-300'>
+                                            <p>Відкритий світ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -279,243 +365,20 @@ const FullCard = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-start justify-start gap-10'>
-                    <div className='inline-flex items-center justify-start gap-2'>
-                        <div className='text-xl font-normal leading-7 text-slate-100'>
-                            Схожі гри
-                        </div>
-                        <div className='relative w-6 h-6' />
+                <div className='flex flex-col gap-10 text-slate-100'>
+                    <div className='flex items-center gap-2'>
+                        <h2 className='text-xl'>Схожі гри</h2>
+                        <img src='src/assets/bigger.svg' alt='bigger' />
                     </div>
-                    <div className='inline-flex items-start justify-start gap-5'>
-                        <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                            <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                                <img
-                                    className='rounded-md w-72 h-72'
-                                    src='https://via.placeholder.com/281x294'
-                                />
-                            </div>
-                            <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                                <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                    <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                        Hogwarts Legacy
-                                    </div>
-                                    <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                        <div className='flex items-start justify-start gap-px rounded-md'>
-                                            <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                                Avalanche Software
-                                            </div>
-                                        </div>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            2023
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                            <div className='text-sm font-light leading-tight text-sky-300'>
-                                                89/100
-                                            </div>
-                                        </div>
-                                        <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                            <div className='flex items-center justify-center gap-px'>
-                                                <div className='relative w-5 h-5' />
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                            <div className='relative w-5 h-4'>
-                                                <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                            <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                                <img
-                                    className='rounded-md w-72 h-72'
-                                    src='https://via.placeholder.com/281x294'
-                                />
-                            </div>
-                            <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                                <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                    <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                        Control Ultimate Edition
-                                    </div>
-                                    <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                        <div className='flex items-start justify-start gap-px rounded-md'>
-                                            <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                                Remedy Entertainment
-                                            </div>
-                                        </div>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            2020
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                            <div className='text-sm font-light leading-tight text-sky-300'>
-                                                81/100
-                                            </div>
-                                        </div>
-                                        <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                            <div className='flex items-center justify-center gap-px'>
-                                                <div className='relative w-5 h-5' />
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                            <div className='relative w-5 h-4'>
-                                                <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                            <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                                <img
-                                    className='rounded-md w-72 h-72'
-                                    src='https://via.placeholder.com/281x294'
-                                />
-                            </div>
-                            <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                                <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                    <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                        The Witcher 3 - Wild Hunt
-                                    </div>
-                                    <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                        <div className='flex items-start justify-start gap-px rounded-md'>
-                                            <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                                CD PROJEKT RED
-                                            </div>
-                                        </div>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            2023
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                            <div className='text-sm font-light leading-tight text-sky-300'>
-                                                92/100
-                                            </div>
-                                        </div>
-                                        <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                            <div className='flex items-center justify-center gap-px'>
-                                                <div className='relative w-5 h-5' />
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                            <div className='relative w-5 h-4'>
-                                                <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-start justify-start border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
-                            <div className='inline-flex items-start justify-start gap-px px-3 pt-3'>
-                                <img
-                                    className='rounded-md w-72 h-72'
-                                    src='https://via.placeholder.com/281x294'
-                                />
-                            </div>
-                            <div className='flex flex-col items-start self-stretch justify-start gap-px px-3 py-6 h-36'>
-                                <div className='flex flex-col items-start self-stretch justify-start h-24 gap-4'>
-                                    <div className='self-stretch text-base font-bold leading-snug text-slate-100'>
-                                        The Elder Scrolls V: Skyrim
-                                    </div>
-                                    <div className='inline-flex items-start self-stretch justify-between gap-4'>
-                                        <div className='flex items-start justify-start gap-px rounded-md'>
-                                            <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                                Bethesda Game Studios
-                                            </div>
-                                        </div>
-                                        <div className='text-xs font-medium leading-none text-center uppercase text-slate-100'>
-                                            2011
-                                        </div>
-                                    </div>
-                                    <div className='inline-flex items-center self-stretch justify-between gap-4'>
-                                        <div className='flex items-center justify-start h-5 gap-1 grow shrink basis-0'>
-                                            <div className='text-sm font-light leading-tight text-sky-300'>
-                                                95/100
-                                            </div>
-                                        </div>
-                                        <div className='flex items-center justify-between h-5 gap-px grow shrink basis-0'>
-                                            <div className='flex items-center justify-center gap-px'>
-                                                <div className='relative w-5 h-5' />
-                                            </div>
-                                        </div>
-                                        <div className='inline-flex flex-col items-end justify-between h-6 gap-px grow shrink basis-0'>
-                                            <div className='relative w-5 h-4'>
-                                                <div className='absolute top-0 left-0 w-5 h-4'></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className='flex gap-5'>
+                        {games.map((game) => (
+                            <Card key={games.id} {...game} />
+                        ))}
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col items-center justify-start gap-px px-20 pt-20 h-72'>
-                <div className='inline-flex items-center justify-start gap-80'>
-                    <div className='inline-flex flex-col items-start justify-center gap-4'>
-                        <div className='inline-flex items-center justify-start gap-2'>
-                            <div className='relative w-10 h-10' />
-                            <div className='text-base font-normal leading-snug text-slate-100'>
-                                Cossack
-                            </div>
-                        </div>
-                        <div className='inline-flex items-start justify-start gap-4'>
-                            <div className='flex items-center justify-center gap-px'>
-                                <div className='text-base font-light leading-snug text-slate-100'>
-                                    Facebook
-                                </div>
-                            </div>
-                            <div className='flex items-center justify-center gap-px'>
-                                <div className='text-base font-light leading-snug text-slate-100'>
-                                    Twitter
-                                </div>
-                            </div>
-                            <div className='flex items-center justify-center gap-px'>
-                                <div className='text-base font-light leading-snug text-slate-100'>
-                                    Telegram
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flex items-start justify-center h-56 gap-5 p-20 border-t border-l border-r border-opacity-50 rounded-tl-lg rounded-tr-lg border-slate-300'>
-                        <div className='inline-flex flex-col items-center justify-center w-48 gap-4'>
-                            <div className='inline-flex items-center justify-center gap-px'>
-                                <div className='text-base font-light leading-snug text-slate-100'>
-                                    Категорії
-                                </div>
-                            </div>
-                            <div className='text-base font-light leading-snug text-slate-100'>
-                                Новинки ігор
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-center justify-center w-48 gap-4'>
-                            <div className='text-base font-light leading-snug text-slate-100'>
-                                Новини
-                            </div>
-                            <div className='text-base font-light leading-snug text-slate-100'>
-                                Профіль
-                            </div>
-                        </div>
-                        <div className='inline-flex flex-col items-center justify-center w-48 gap-4'>
-                            <div className='text-base font-light leading-snug text-slate-100'>
-                                Про Cossack
-                            </div>
-                            <div className='text-base font-light leading-snug text-slate-100'>
-                                Підтримка
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <Footer />
+        </Fragment>
     );
 };
 

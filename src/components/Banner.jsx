@@ -6,7 +6,7 @@ import search from '../assets/search.svg';
 const Banner = () => {
     return (
         <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner'>
-            <div className='inline-flex flex-col items-center justify-start gap-10 tracking-widest text-slate-100'>
+            <div className='inline-flex flex-col items-center gap-10 tracking-widest text-slate-100'>
                 <div className='flex flex-col items-center self-stretch justify-center h-32'>
                     <p className='mb-5 text-4xl font-bold uppercase'>
                         Геймплей,
@@ -23,7 +23,7 @@ const Banner = () => {
                 <div class='flex items-center p-2 mb-2 w-full bg-opacity-50 border border-opacity-50 rounded-lg h-11 bg-slate-300 border-slate-300'>
                     <input
                         type='text'
-                        class='flex-grow outline-none px-4 text-xs font-medium leading-tight bg-transparent'
+                        class='flex-grow outline-none px-4 text-xs font-medium leading-tight bg-transparent placeholder-slate-100'
                         placeholder='Введіть назву гри'
                         value='Введіть назву гри'
                     />
