@@ -12,7 +12,7 @@ const GamesPage = () => {
             company: 'CD Project Red',
             year: 2015,
             rating: 92,
-            image: 'src/assets/witcher.jpg',
+            image: 'assets/witcher.jpg',
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ const GamesPage = () => {
             company: 'Avalanche Software',
             year: 2022,
             rating: 89,
-            image: 'src/assets/hogwarts.jpg',
+            image: 'assets/hogwarts.jpg',
         },
         {
             id: 3,
@@ -28,7 +28,7 @@ const GamesPage = () => {
             company: 'Bethesda Game Studios',
             year: 2014,
             rating: 95,
-            image: 'src/assets/skyrim.jpg',
+            image: 'assets/skyrim.jpg',
         },
         {
             id: 4,
@@ -36,7 +36,7 @@ const GamesPage = () => {
             company: 'Remedy Entertainment',
             year: 2018,
             rating: 81,
-            image: 'src/assets/control.jpg',
+            image: 'assets/control.jpg',
         },
         {
             id: 5,
@@ -44,7 +44,7 @@ const GamesPage = () => {
             company: 'CD Project Red',
             year: 2015,
             rating: 92,
-            image: 'src/assets/witcher.jpg',
+            image: 'assets/witcher.jpg',
         },
         {
             id: 6,
@@ -52,7 +52,7 @@ const GamesPage = () => {
             company: 'Avalanche Software',
             year: 2022,
             rating: 89,
-            image: 'src/assets/hogwarts.jpg',
+            image: 'assets/hogwarts.jpg',
         },
         {
             id: 7,
@@ -60,7 +60,7 @@ const GamesPage = () => {
             company: 'Bethesda Game Studios',
             year: 2014,
             rating: 95,
-            image: 'src/assets/skyrim.jpg',
+            image: 'assets/skyrim.jpg',
         },
         {
             id: 8,
@@ -68,7 +68,7 @@ const GamesPage = () => {
             company: 'Remedy Entertainment',
             year: 2018,
             rating: 81,
-            image: 'src/assets/control.jpg',
+            image: 'assets/control.jpg',
         },
         {
             id: 9,
@@ -76,7 +76,7 @@ const GamesPage = () => {
             company: 'Avalanche Software',
             year: 2022,
             rating: 89,
-            image: 'src/assets/hogwarts.jpg',
+            image: 'assets/hogwarts.jpg',
         },
     ];
 
@@ -104,15 +104,15 @@ const GamesPage = () => {
                             </button>
                             <button className='flex gap-3 px-6 py-2 border border-gray-200 rounded-md bg-slate-600 '>
                                 Офіційні
-                                <img src="src/assets/crowno.svg" alt="crown" />
+                                <img src='assets/crowno.svg' alt='crown' />
                             </button>
                             <button className='flex gap-3 px-6 py-2 border border-gray-200 rounded-md bg-slate-800'>
                                 Напівофіційні
-                                <img src="src/assets/crownh.svg" alt="crown" />
+                                <img src='assets/crownh.svg' alt='crown' />
                             </button>
                             <button className='flex gap-3 px-6 py-2 border border-gray-200 rounded-md bg-slate-800'>
                                 Неофіційні
-                                <img src="src/assets/crown.svg" alt="crown" />
+                                <img src='assets/crown.svg' alt='crown' />
                             </button>
                         </div>
                         <select className='px-6 py-2 border border-gray-200 rounded-md bg-slate-800'>
@@ -137,7 +137,7 @@ const GamesPage = () => {
                             <li>...</li>
                             <li>20</li>
                             <li>
-                                <img src='src/assets/bigger.svg' alt='bigger' />
+                                <img src='assets/bigger.svg' alt='bigger' />
                             </li>
                         </ul>
                     </div>

@@ -10,7 +10,7 @@ const games = [
         company: 'CD Project Red',
         year: 2015,
         rating: 92,
-        image: 'src/assets/witcher.jpg',
+        image: 'assets/witcher.jpg',
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const games = [
         company: 'Avalanche Software',
         year: 2022,
         rating: 89,
-        image: 'src/assets/hogwarts.jpg',
+        image: 'assets/hogwarts.jpg',
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const games = [
         company: 'Bethesda Game Studios',
         year: 2014,
         rating: 95,
-        image: 'src/assets/skyrim.jpg',
+        image: 'assets/skyrim.jpg',
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ const games = [
         company: 'Remedy Entertainment',
         year: 2018,
         rating: 81,
-        image: 'src/assets/control.jpg',
+        image: 'assets/control.jpg',
     },
 ];
 
@@ -50,24 +50,24 @@ const FullCard = () => {
                         <div className='flex flex-col gap-10'>
                             <img
                                 className='rounded-lg'
-                                src='src/assets/witcher0.jpg'
+                                src='assets/witcher0.jpg'
                             />
                             <div className='flex justify-between gap-5'>
                                 <img
                                     className='rounded-lg'
-                                    src='src/assets/witcher1.jpg'
+                                    src='assets/witcher1.jpg'
                                 />
                                 <img
                                     className='rounded-lg'
-                                    src='src/assets/witcher2.jpg'
+                                    src='assets/witcher2.jpg'
                                 />
                                 <img
                                     className='rounded-lg'
-                                    src='src/assets/witcher3.jpg'
+                                    src='assets/witcher3.jpg'
                                 />
                                 <img
                                     className='rounded-lg'
-                                    src='src/assets/witcher4.jpg'
+                                    src='assets/witcher4.jpg'
                                 />
                             </div>
                             <div className='flex flex-col gap-10'>
@@ -101,7 +101,7 @@ const FullCard = () => {
                                                 <div className='flex items-center gap-2'>
                                                     <img
                                                         className='w-10 h-10 rounded-full'
-                                                        src='src/assets/photo.jpg'
+                                                        src='assets/photo.jpg'
                                                     />
                                                     <p className='font-bold'>
                                                         Michael
@@ -109,23 +109,23 @@ const FullCard = () => {
                                                 </div>
                                                 <div className='flex gap-1'>
                                                     <img
-                                                        src='src/assets/star-full.svg'
+                                                        src='assets/star-full.svg'
                                                         alt='star'
                                                     />
                                                     <img
-                                                        src='src/assets/star-full.svg'
+                                                        src='assets/star-full.svg'
                                                         alt='star'
                                                     />
                                                     <img
-                                                        src='src/assets/star-full.svg'
+                                                        src='assets/star-full.svg'
                                                         alt='star'
                                                     />
                                                     <img
-                                                        src='src/assets/star-empty.svg'
+                                                        src='assets/star-empty.svg'
                                                         alt='star'
                                                     />
                                                     <img
-                                                        src='src/assets/star-empty.svg'
+                                                        src='assets/star-empty.svg'
                                                         alt='star'
                                                     />
                                                 </div>
@@ -148,7 +148,7 @@ const FullCard = () => {
                                                 <div className='flex gap-2'>
                                                     <img
                                                         className='w-10 h-10 rounded-full'
-                                                        src='src/assets/photoa.jpg'
+                                                        src='assets/photoa.jpg'
                                                     />
                                                     <div className='flex flex-col gap-2'>
                                                         <div className='font-bold'>
@@ -157,27 +157,27 @@ const FullCard = () => {
                                                         <div className='flex gap-1'>
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                         </div>
@@ -200,7 +200,7 @@ const FullCard = () => {
                                                 <div className='flex gap-2'>
                                                     <img
                                                         className='w-10 h-10 rounded-full'
-                                                        src='src/assets/photon.jpg'
+                                                        src='assets/photon.jpg'
                                                     />
                                                     <div className='flex flex-col gap-2'>
                                                         <div className='font-bold'>
@@ -209,27 +209,27 @@ const FullCard = () => {
                                                         <div className='flex gap-1'>
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                         </div>
@@ -251,7 +251,7 @@ const FullCard = () => {
                                                 <div className='flex gap-2'>
                                                     <img
                                                         className='w-10 h-10 rounded-full'
-                                                        src='src/assets/photom.jpg'
+                                                        src='assets/photom.jpg'
                                                     />
                                                     <div className='flex flex-col gap-2'>
                                                         <div className='font-bold'>
@@ -260,27 +260,27 @@ const FullCard = () => {
                                                         <div className='flex gap-1'>
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-full.svg'
+                                                                src='assets/star-full.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                             <img
                                                                 className='w-3'
-                                                                src='src/assets/star-empty.svg'
+                                                                src='assets/star-empty.svg'
                                                                 alt='star'
                                                             />
                                                         </div>
@@ -327,16 +327,16 @@ const FullCard = () => {
                                     <p>Платформи:</p>
                                     <div className='flex gap-3'>
                                         <img
-                                            src='src/assets/xbox.svg'
+                                            src='assets/xbox.svg'
                                             alt='xbox'
                                         />
                                         <img
-                                            src='src/assets/nintendo.svg'
+                                            src='assets/nintendo.svg'
                                             alt='nintendo'
                                         />
-                                        <img src='src/assets/pc.svg' alt='pc' />
+                                        <img src='assets/pc.svg' alt='pc' />
                                         <img
-                                            src='src/assets/playstation.svg'
+                                            src='assets/playstation.svg'
                                             alt='playstation'
                                         />
                                     </div>
@@ -368,7 +368,7 @@ const FullCard = () => {
                 <div className='flex flex-col gap-10 text-slate-100'>
                     <div className='flex items-center gap-2'>
                         <h2 className='text-xl'>Схожі гри</h2>
-                        <img src='src/assets/bigger.svg' alt='bigger' />
+                        <img src='assets/bigger.svg' alt='bigger' />
                     </div>
                     <div className='flex gap-5'>
                         {games.map((game) => (

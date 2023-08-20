@@ -11,7 +11,7 @@ const games = [
         company: 'CD Project Red',
         year: 2015,
         rating: 92,
-        image: 'src/assets/witcher.jpg',
+        image: 'assets/witcher.jpg',
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const games = [
         company: 'Avalanche Software',
         year: 2022,
         rating: 89,
-        image: 'src/assets/hogwarts.jpg',
+        image: 'assets/hogwarts.jpg',
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const games = [
         company: 'Bethesda Game Studios',
         year: 2014,
         rating: 95,
-        image: 'src/assets/skyrim.jpg',
+        image: 'assets/skyrim.jpg',
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const games = [
         company: 'Remedy Entertainment',
         year: 2018,
         rating: 81,
-        image: 'src/assets/control.jpg',
+        image: 'assets/control.jpg',
     },
 ];
 
@@ -48,10 +48,10 @@ const Profile = () => {
                         <div className='flex items-center justify-between gap-5'>
                             <img
                                 className='w-20 h-20 rounded-full'
-                                src='src/assets/photo.jpg'
+                                src='assets/photo.jpg'
                             />
                             <p>Artur723</p>
-                            <img src='src/assets/pencil.svg' alt='pencil' />
+                            <img src='assets/pencil.svg' alt='pencil' />
                         </div>
                         <button className='py-2 border rounded-lg px-9 border-rose-900'>
                             Видалити профіль
@@ -72,7 +72,7 @@ const Profile = () => {
                     <div className='flex flex-col justify-center gap-4'>
                         <div className='flex items-center gap-2'>
                             <img
-                                src='src/assets/logo.svg'
+                                src='assets/logo.svg'
                                 alt='logo'
                                 className='border rounded-full border-slate-600'
                             />
