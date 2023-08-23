@@ -6,7 +6,7 @@ import React from 'react';
 const Registration = () => {
     return (
         <div className='bg-footer max-w-[1440px] m-auto'>
-            <div className='flex items-center justify-center bg-black bg-opacity-50 h-screen-minus-menu '>
+            <div className='flex items-center justify-center bg-black bg-opacity-50 h-screen-minus-menu'>
                 <div className='flex flex-col items-center gap-10 bg-opacity-50 py-14 rounded-3xl align-items-center bg-slate-300 px-28 text-slate-100'>
                     <div className='flex items-center justify-center gap-2 text-xl'>
                         <Link to={'/login'}>Вхід</Link>

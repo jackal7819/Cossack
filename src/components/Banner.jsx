@@ -1,8 +1,22 @@
+import { useQuery } from '@tanstack/react-query';
 import '../index.css';
-
+import axios from '../axios';
 import React from 'react';
 
 const Banner = () => {
+    const { isLoading, isError, error, data } = useQuery(
+        ['catalog'],
+        () => axios.get('/api/games/localizations-count'),
+        { select: ({ data }) => data }
+    );
+
+    if (isLoading) {
+        return <div className='text-white'>Loading...</div>;
+    }
+
+    if (isError) {
+        return <div className='text-white'>Error: {error.message}</div>;
+    }
     return (
         <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner'>
             <div className='inline-flex flex-col items-center gap-10 tracking-widest text-slate-100'>
@@ -30,15 +44,15 @@ const Banner = () => {
                 </div>
                 <div className='flex gap-20 text-xl leading-7 text-red-50'>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>1465</p>
+                        <p className='text-4xl font-bold leading-10'>{data.official}</p>
                         <p>Офіційних</p>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>28</p>
+                        <p className='text-4xl font-bold leading-10'>{data.semiOfficial}</p>
                         <p>Напівофіційних</p>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>248</p>
+                        <p className='text-4xl font-bold leading-10'>{data.nonOfficial}</p>
                         <p>Неофіційних</p>
                     </div>
                 </div>

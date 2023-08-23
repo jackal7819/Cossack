@@ -3,82 +3,23 @@ import React, { Fragment } from 'react';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
+import { useQuery } from '@tanstack/react-query';
+import axios from '../axios';
 
 const GamesPage = () => {
-    const games = [
-        {
-            id: 1,
-            title: 'The Witcher 3 - Wild Hunt',
-            company: 'CD Project Red',
-            year: 2015,
-            rating: 92,
-            image: '/assets/witcher.jpg',
-        },
-        {
-            id: 2,
-            title: 'Hogwarts Legacy',
-            company: 'Avalanche Software',
-            year: 2022,
-            rating: 89,
-            image: '/assets/hogwarts.jpg',
-        },
-        {
-            id: 3,
-            title: 'The Elder Scrolls V: Skyrim',
-            company: 'Bethesda Game Studios',
-            year: 2014,
-            rating: 95,
-            image: '/assets/skyrim.jpg',
-        },
-        {
-            id: 4,
-            title: 'Control - Ultimate Edition',
-            company: 'Remedy Entertainment',
-            year: 2018,
-            rating: 81,
-            image: '/assets/control.jpg',
-        },
-        {
-            id: 5,
-            title: 'The Witcher 3 - Wild Hunt',
-            company: 'CD Project Red',
-            year: 2015,
-            rating: 92,
-            image: '/assets/witcher.jpg',
-        },
-        {
-            id: 6,
-            title: 'Hogwarts Legacy',
-            company: 'Avalanche Software',
-            year: 2022,
-            rating: 89,
-            image: '/assets/hogwarts.jpg',
-        },
-        {
-            id: 7,
-            title: 'The Elder Scrolls V: Skyrim',
-            company: 'Bethesda Game Studios',
-            year: 2014,
-            rating: 95,
-            image: '/assets/skyrim.jpg',
-        },
-        {
-            id: 8,
-            title: 'Control - Ultimate Edition',
-            company: 'Remedy Entertainment',
-            year: 2018,
-            rating: 81,
-            image: '/assets/control.jpg',
-        },
-        {
-            id: 9,
-            title: 'Hogwarts Legacy',
-            company: 'Avalanche Software',
-            year: 2022,
-            rating: 89,
-            image: '/assets/hogwarts.jpg',
-        },
-    ];
+    const { isLoading, isError, error, data } = useQuery(
+        ['catalog'],
+        () => axios.get('/api/games/last-populars'),
+        { select: ({ data }) => data.gameCards }
+    );
+
+    if (isLoading) {
+        return <div className='text-white'>Loading...</div>;
+    }
+
+    if (isError) {
+        return <div className='text-white'>Error: {error.message}</div>;
+    }
 
     return (
         <Fragment>
@@ -123,8 +64,8 @@ const GamesPage = () => {
                         </select>
                     </div>
                     <div className='flex flex-wrap gap-5'>
-                        {games.map((game) => (
-                            <Card key={games.id} {...game} />
+                        {data?.map((game) => (
+                            <Card key={data.id} {...game} />
                         ))}
                     </div>
                     <div className='flex items-center justify-center my-4'>

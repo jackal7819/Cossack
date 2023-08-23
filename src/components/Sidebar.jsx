@@ -25,7 +25,7 @@ const types = [
 
 const Sidebar = () => {
     return (
-        <div className='w-[720px] text-slate-300'>
+        <div className='w-[300px] text-slate-300'>
             <h2 className='mb-4 text-xl font-semibold'>Фільтри</h2>
             <div className='mb-4'>
                 <h3 className='mb-2 text-lg font-semibold'>Платформа</h3>
