@@ -1,7 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import Catalog from './pages/Catalog';
-import { Fragment } from 'react';
+import { FilterProvider } from './components/FilterContext';
 import FullCard from './pages/FullCard';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -14,12 +14,12 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: (
-            <Fragment>
+            <FilterProvider>
                 <Header />
                 <div>
                     <Outlet />
                 </div>
-            </Fragment>
+            </FilterProvider>
         ),
         children: [
             { index: true, element: <Home /> },
