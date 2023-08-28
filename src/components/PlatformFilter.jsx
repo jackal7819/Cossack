@@ -1,6 +1,6 @@
 import React from 'react';
 import { platforms } from '../data';
-import { useFilterContext } from './FilterContext';
+import { useFilterContext } from './useFilterContext';
 
 const PlatformFilter = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();

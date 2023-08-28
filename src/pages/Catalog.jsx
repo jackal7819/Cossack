@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import { useQuery } from '@tanstack/react-query';
 import axios from '../axios';
 import { orderByOptions } from '../data';
-import { useFilterContext } from '../components/FilterContext';
+import { useFilterContext } from '../components/useFilterContext';
 
 const Catalog = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();

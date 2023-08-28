@@ -1,6 +1,6 @@
 import React from 'react';
 import { genres } from '../data';
-import { useFilterContext } from './FilterContext';
+import { useFilterContext } from './useFilterContext';
 
 const GenreFilter = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();

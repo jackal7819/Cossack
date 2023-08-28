@@ -1,6 +1,6 @@
 import React from 'react';
 import { localizationTypes } from '../data';
-import { useFilterContext } from './FilterContext';
+import { useFilterContext } from './useFilterContext';
 
 const LocalizationTypeFilter = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();

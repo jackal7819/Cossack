@@ -1,6 +1,6 @@
 import React from 'react';
 import { developerCountryType } from '../data';
-import { useFilterContext } from './FilterContext';
+import { useFilterContext } from './useFilterContext';
 
 const DeveloperCountryFilter = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();

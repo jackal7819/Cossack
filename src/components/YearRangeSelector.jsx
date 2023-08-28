@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { useFilterContext } from './FilterContext';
+import { useFilterContext } from './useFilterContext';
 
 const YearRangeSelector = () => {
     const { selectedFilters, setSelectedFilters } = useFilterContext();
