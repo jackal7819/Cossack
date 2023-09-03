@@ -37,18 +37,16 @@ const Footer = () => {
                 </div>
                 <div className='flex justify-between gap-20 p-20 border-t border-l border-r rounded-tl-lg rounded-tr-lg border-slate-100'>
                     <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                        <div className='inline-flex items-center justify-center gap-px'>
-                            <Link to={'/'}>Категорії</Link>
-                        </div>
-                        <Link to={'/'}>Новинки ігор</Link>
+                        <Link to={'/catalog'}>Каталог</Link>
+                        <Link to={'/#novelties'}>Популярні новинки</Link>
                     </div>
                     <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                        <Link to={'/'}>Новини</Link>
-                        <Link to={'/'}>Профіль</Link>
+                        <Link to={'/#bestsellers'}>Бестселери</Link>
+                        <Link to={'/profile'}>Профіль</Link>
                     </div>
                     <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                        <Link to={'/'}>Про Cossack</Link>
-                        <Link to={'/'}>Підтримка</Link>
+                        <Link to={'/about'}>Про Cossack</Link>
+                        <Link to={'/faq'}>FAQ</Link>
                     </div>
                 </div>
             </div>

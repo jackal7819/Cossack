@@ -1,8 +1,9 @@
 import '../index.css';
 
+import React, {useEffect} from 'react';
+
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 const games = [
     {
@@ -40,6 +41,10 @@ const games = [
 ];
 
 const Profile = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <div className='bg-footer max-w-[1440px] m-auto'>
             <div className='flex flex-col justify-between bg-black bg-opacity-50 min-h-screen-minus-menu'>
@@ -50,7 +55,7 @@ const Profile = () => {
                                 className='w-20 h-20 rounded-full'
                                 src='/assets/photo.jpg'
                             />
-                            <p>Artur723</p>
+                            <p>Arthur723</p>
                             <img src='/assets/pencil.svg' alt='pencil' />
                         </div>
                         <button className='py-2 border rounded-lg px-9 border-rose-900'>
@@ -100,21 +105,19 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className='flex justify-between gap-20 p-20 border-t border-l border-r rounded-tl-lg rounded-tr-lg border-slate-100'>
-                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                            <div className='inline-flex items-center justify-center gap-px'>
-                                <Link to={'/'}>Категорії</Link>
-                            </div>
-                            <Link to={'/'}>Новинки ігор</Link>
-                        </div>
-                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                            <Link to={'/'}>Новини</Link>
-                            <Link to={'/'}>Профіль</Link>
-                        </div>
-                        <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
-                            <Link to={'/'}>Про Cossack</Link>
-                            <Link to={'/'}>Підтримка</Link>
-                        </div>
+                    <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                        <Link to={'/catalog'}>Каталог</Link>
+                        <Link to={'/#novelties'}>Популярні новинки</Link>
                     </div>
+                    <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                        <Link to={'/#bestsellers'}>Бестселери</Link>
+                        <Link to={'/profile'}>Профіль</Link>
+                    </div>
+                    <div className='inline-flex flex-col items-center justify-center flex-grow gap-4'>
+                        <Link to={'/about'}>Про Cossack</Link>
+                        <Link to={'/faq'}>FAQ</Link>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

@@ -82,7 +82,7 @@ const FullCard = () => {
                                     Після подій другої частини Геральт повертає
                                     втрачені спогади, і опиняється на
                                     роздоріжжі. У Північних королівствах вирує
-                                    війна, а Йенніфер, подруга Геральта, яка
+                                    війна, а Йеннефер, подруга Геральта, яка
                                     несподівано повернулася, просить його
                                     допомогти з пошуками Цирилли,
                                     Дитя-несподіванки, яка може зупинити
@@ -151,9 +151,9 @@ const FullCard = () => {
                                                         src='/assets/photoa.jpg'
                                                     />
                                                     <div className='flex flex-col gap-2'>
-                                                        <div className='font-bold'>
+                                                        <p className='font-bold'>
                                                             Adam76
-                                                        </div>
+                                                        </p>
                                                         <div className='flex gap-1'>
                                                             <img
                                                                 className='w-3'
@@ -255,7 +255,7 @@ const FullCard = () => {
                                                     />
                                                     <div className='flex flex-col gap-2'>
                                                         <div className='font-bold'>
-                                                            Michal3
+                                                            Michael3
                                                         </div>
                                                         <div className='flex gap-1'>
                                                             <img
@@ -318,9 +318,9 @@ const FullCard = () => {
                                         <p>Локалізація:</p>
                                     </div>
                                     <div className='flex flex-col gap-4'>
-                                        <p>CD PROJEKT RED</p>
+                                        <p>CD PROJECT RED</p>
                                         <p>2023</p>
-                                        <p>Субтітри</p>
+                                        <p>Субтитри</p>
                                     </div>
                                 </div>
                                 <div className='flex gap-5'>

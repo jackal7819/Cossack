@@ -1,6 +1,8 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import About from './pages/About';
 import Catalog from './pages/Catalog';
+import Faq from './pages/FAQ';
 import { FilterProvider } from './components/FilterContext';
 import FullCard from './pages/FullCard';
 import Header from './components/Header';
@@ -29,6 +31,8 @@ const router = createBrowserRouter([
             { path: 'restore', element: <Restore /> },
             { path: 'registration', element: <Registration /> },
             { path: 'catalog', element: <Catalog /> },
+            { path: 'about', element: <About /> },
+            { path: 'faq', element: <Faq /> },
         ],
     },
 ]);

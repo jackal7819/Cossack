@@ -3,15 +3,15 @@ import React from 'react';
 
 const Card = ({ name, developers, releaseDate, rating, cover }) => {
     return (
-        <div className='flex flex-col border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
+        <div className='flex flex-col justify-between border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
             <Link to='/card' className='flex px-3 pt-3'>
-                <img className='w-full rounded-md' src={cover} />
+                {cover ? <img className='w-full rounded-md' src={cover} /> : <img className='w-full rounded-md' src='/assets/game-pc.webp' />}
             </Link>
             <div className='flex flex-col self-stretch px-3 py-6 h-36'>
                 <div className='flex flex-col self-stretch h-24 gap-4 text-slate-100'>
                     <h4 className='font-bold truncate'>{name}</h4>
                     <div className='flex justify-between gap-4 text-xs font-medium text-center uppercase'>
-                        <p>{developers}</p>
+                    <p>{developers.length > 0 ? developers : 'No developers are listed'}</p>
                         <p>{releaseDate?.slice(0, 4)}</p>
                     </div>
                     <div className='flex items-center justify-between gap-4'>
@@ -22,7 +22,6 @@ const Card = ({ name, developers, releaseDate, rating, cover }) => {
                             </p>
                         </span>
                         <img src={'/assets/heart.svg'} alt='heart' />
-                        <img src={'/assets/crown.svg'} alt='crown' />
                     </div>
                 </div>
             </div>

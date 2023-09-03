@@ -19,7 +19,7 @@ const Bestsellers = () => {
     }
 
     return (
-        <div className='flex flex-col gap-10 text-slate-100'>
+        <div className='flex flex-col gap-10 text-slate-100' id='bestsellers'>
             <div className='flex items-center gap-2'>
                 <h2 className='text-xl'>Бестселери</h2>
                 <img src='/assets/bigger.svg' alt='bigger' />

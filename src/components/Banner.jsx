@@ -1,14 +1,27 @@
-import { useQuery } from '@tanstack/react-query';
 import '../index.css';
+
+import React, { useState } from 'react';
+
 import axios from '../axios';
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 
 const Banner = () => {
+    const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState('');
     const { isLoading, isError, error, data } = useQuery(
         ['catalog'],
         () => axios.get('/api/games/localizations-count'),
         { select: ({ data }) => data }
     );
+
+    const handleSearch = () => {
+        navigate(`/catalog?search=${searchQuery}`);
+    };
+
+    const handleInputChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
 
     if (isLoading) {
         return <div className='text-white'>Loading...</div>;
@@ -33,27 +46,40 @@ const Banner = () => {
                         Обирай і насолоджуйся українізованими іграми
                     </p>
                 </div>
-                <div class='flex items-center p-2 mb-2 w-full bg-opacity-50 border border-opacity-50 rounded-lg h-11 bg-slate-300 border-slate-300'>
-                    <input
-                        type='text'
-                        class='flex-grow outline-none px-4 text-xs font-medium leading-tight bg-transparent placeholder-slate-100'
-                        placeholder='Введіть назву гри'
-                        value='Введіть назву гри'
-                    />
-                    <img src='/assets/search.svg' alt='search' className='cursor-pointer' />
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center'>
+                        <input
+                            type='text'
+                            placeholder='Введіть назву гри'
+                            className='px-6 py-2 mr-2 border rounded-lg w-96 text-slate-400'
+                            value={searchQuery}
+                            onChange={handleInputChange}
+                        />
+                        <button
+                            className='px-6 py-2 rounded-lg bg-sky-600'
+                            onClick={handleSearch}>
+                            Пошук
+                        </button>
+                    </div>
                 </div>
                 <div className='flex gap-20 text-xl leading-7 text-red-50'>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>{data.official}</p>
-                        <p>Офіційних</p>
+                        <p className='text-4xl font-bold leading-10'>
+                            {data.official}
+                        </p>
+                        <p>Інтерфейс</p>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>{data.semiOfficial}</p>
-                        <p>Напівофіційних</p>
+                        <p className='text-4xl font-bold leading-10'>
+                            {data.semiOfficial}
+                        </p>
+                        <p>Текст</p>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>{data.nonOfficial}</p>
-                        <p>Неофіційних</p>
+                        <p className='text-4xl font-bold leading-10'>
+                            {data.nonOfficial}
+                        </p>
+                        <p>Озвучення</p>
                     </div>
                 </div>
             </div>
