@@ -15,13 +15,14 @@ const Card = ({ name, developers, releaseDate, rating, cover }) => {
                         <p>{releaseDate?.slice(0, 4)}</p>
                     </div>
                     <div className='flex items-center justify-between gap-4'>
-                        <span className='flex flex-row gap-1'>
+                        <span className='flex gap-1'>
                             <img src={'/assets/star.svg'} alt='star' />
-                            <p className='flex mt-1 font-light text-sky-300'>
+                            <p className='flex font-light text-sky-300'>
                                 {Math.round(rating)}/100
                             </p>
                         </span>
-                        <img src={'/assets/heart.svg'} alt='heart' />
+                        <img src={'/assets/heart.svg'} alt='heart' className='hidden'/>
+                        <p className='text-sky-300'>UA</p>
                     </div>
                 </div>
             </div>

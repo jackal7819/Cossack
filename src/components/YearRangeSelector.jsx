@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+
+import React, { useEffect, useState } from 'react';
+
+import Slider from 'rc-slider';
 import { useFilterContext } from './useFilterContext';
 
 const YearRangeSelector = () => {
@@ -32,7 +34,8 @@ const YearRangeSelector = () => {
 
     return (
         <div className='my-4'>
-            <div className='mb-2 text-lg font-semibold'>Рік виходу гри</div>
+            <p className='mb-2 text-lg font-semibold'>Рік виходу гри</p>
+            <div className='px-5'>
             <Slider
                 range
                 min={1990}
@@ -40,6 +43,7 @@ const YearRangeSelector = () => {
                 value={yearRange}
                 onChange={handleYearChange}
             />
+            </div>
             <div className='flex justify-between mt-4 text-sm'>
                 <p className='px-4 py-2 border border-gray-500 rounded-md'>
                     {yearRange[0]}

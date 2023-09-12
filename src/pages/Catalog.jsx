@@ -16,9 +16,17 @@ const Catalog = () => {
     const [orderBy, setOrderBy] = useState('rating');
     const [searchQuery, setSearchQuery] = useState('');
     const [currentSearchQuery, setCurrentSearchQuery] = useState('');
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
+                if (window.innerWidth > 1279) {
+            setIsSidebarOpen(true);
+        }
     }, []);
 
     useEffect(() => {
@@ -122,11 +130,16 @@ const Catalog = () => {
 
     return (
         <Fragment>
-            <div className='flex gap-10 bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 lg:pl-20 lg:pr-20 pt-20 mb-[-65px] px-5'>
+            <div className='bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 lg:pl-20 lg:pr-20 pt-20 mb-[-65px] px-5 relative'>
                 <div className='flex flex-col items-center justify-center gap-10'>
                     <h2 className='text-3xl font-semibold'>
-                    Каталог локалізованих ігор
+                        Каталог локалізованих ігор
                     </h2>
+                    <button
+                        className='absolute block w-20 py-2 text-center rounded-lg left-5 top-5 bg-sky-600 xl:hidden'
+                        onClick={toggleSidebar}>
+                        {isSidebarOpen ? 'Close' : 'Filter'}
+                    </button>
                     <div className='flex flex-wrap items-center justify-center gap-3'>
                         <select
                             className='px-6 py-2 border border-gray-200 rounded-md bg-slate-800'
@@ -155,11 +168,17 @@ const Catalog = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='flex flex-wrap items-center justify-center gap-5'>
-                        {games?.map((game) => (
-                            <Card key={data.id} {...game} />
-                        ))}
+                    <div className='flex gap-10'>
+                        <div className='flex flex-wrap items-center justify-center gap-5'>
+                            {games?.map((game) => (
+                                <Card key={data.id} {...game} />
+                            ))}
+                        </div>
+                        {isSidebarOpen && (
+                            <Sidebar onFilterChange={handleFilterChange} />
+                        )}
                     </div>
+
                     <div className='flex items-center justify-center'>
                         <ul className='flex space-x-5'>
                             {displayPageNumbers().map((pageNumber, index) => (
@@ -180,7 +199,6 @@ const Catalog = () => {
                         </ul>
                     </div>
                 </div>
-                <Sidebar onFilterChange={handleFilterChange} />
             </div>
             <Footer />
         </Fragment>

@@ -26,7 +26,7 @@ const Bestsellers = () => {
         <div className='flex flex-col gap-10 pl-5 pr-5 text-slate-100' id='bestsellers'>
             <div className='flex items-center gap-2 m-auto'>
                 <h2 className='text-2xl uppercase text-sky-300'>Бестселери</h2>
-                <img src='/assets/bigger.svg' alt='bigger' />
+                <img src='/assets/bigger.svg' alt='bigger' className='hidden'/>
             </div>
             <div className='flex flex-wrap items-center justify-center gap-5'>
                 {data.map((game) => (
