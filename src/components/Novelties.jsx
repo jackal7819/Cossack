@@ -18,13 +18,21 @@ const Novelties = () => {
         return <div className='text-white'>Error: {error.message}</div>;
     }
 
+    if (window.innerWidth < 1400 && window.innerWidth > 1060) {
+        data.length = 3;
+    }
+
     return (
-        <div className='flex flex-col gap-10 text-slate-100' id='novelties'>
-            <div className='flex items-center gap-2'>
-                <h2 className='text-xl'>Популярні новинки</h2>
+        <div
+            className='flex flex-col gap-10 pl-5 pr-5 text-slate-100'
+            id='novelties'>
+            <div className='flex items-center gap-2 m-auto xl:m-0'>
+                <h2 className='text-2xl uppercase text-sky-300'>
+                    Популярні новинки
+                </h2>
                 <img src='/assets/bigger.svg' alt='bigger' />
             </div>
-            <div className='flex gap-5'>
+            <div className='flex flex-wrap justify-center gap-5'>
                 {data.map((game) => (
                     <Card key={data.id} {...game} />
                 ))}

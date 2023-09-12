@@ -8,9 +8,9 @@ const Faq = () => {
     return (
         <div className='bg-footer max-w-[1440px] m-auto'>
             <div className='flex items-center justify-center bg-black bg-opacity-50'>
-                <div className='flex flex-col bg-opacity-50 gap- py-14 rounded-3xl align-items-center px-28 text-slate-100'>
+                <div className='flex flex-col px-5 bg-opacity-50 py-14 rounded-3xl align-items-center lg:px-28 text-slate-100'>
                     <h1 className='text-2xl font-semibold text-center'>FAQ</h1>
-                    <ol class='list-decimal flex flex-col gap-5 bg-opacity-50 gap- py-14 rounded-3xl align-items-center px-28 text-slate-100'>
+                    <ol class='list-decimal flex flex-col gap-5 bg-opacity-50  py-14 rounded-3xl align-items-center lg:px-28 text-slate-100 px-5'>
                         <li>
                             <strong>Що таке локалізація в іграх?</strong>
                             <ul class='list-disc ml-5'>

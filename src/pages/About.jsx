@@ -1,12 +1,17 @@
 import '../index.css';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    const isWideScreen = window.innerWidth >= 1280;
+    
     return (
         <div className='bg-footer max-w-[1440px] m-auto'>
-            <div className='flex items-center justify-center bg-black bg-opacity-50 h-screen-minus-menu '>
-                <div className='flex flex-col items-center gap-3 text-center bg-opacity-50 py-14 rounded-3xl align-items-center px-28 text-slate-100'>
+            <div className={`flex items-center justify-center bg-black bg-opacity-50 ${isWideScreen ? 'h-screen-minus-menu' : ''}`}>
+                <div className='flex flex-col items-center gap-3 px-5 text-center bg-opacity-50 py-14 rounded-3xl align-items-center lg:px-28 text-slate-100'>
                     <h1 className='text-2xl font-semibold'>ХТО МИ?</h1>
                     <p>Команда розробників сайту ігор української локалізації!</p>
                     <p>Ми група професіоналів-початківців, які працюють над створенням та удосконаленням веб-платформи для україномовних гравців з усього світу.</p>

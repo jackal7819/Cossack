@@ -31,9 +31,9 @@ const Banner = () => {
         return <div className='text-white'>Error: {error.message}</div>;
     }
     return (
-        <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner'>
+        <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner px-5'>
             <div className='inline-flex flex-col items-center gap-10 tracking-widest text-slate-100'>
-                <div className='flex flex-col items-center self-stretch justify-center h-32'>
+                <div className='flex flex-col items-center self-stretch justify-center h-32 text-center'>
                     <p className='mb-5 text-4xl font-bold uppercase'>
                         Геймплей,
                         <span className='text-yellow-400'> наповнений</span>
@@ -51,7 +51,7 @@ const Banner = () => {
                         <input
                             type='text'
                             placeholder='Введіть назву гри'
-                            className='px-6 py-2 mr-2 border rounded-lg w-96 text-slate-400'
+                            className='px-6 py-2 mr-2 border rounded-lg xl:w-96 text-slate-400'
                             value={searchQuery}
                             onChange={handleInputChange}
                         />

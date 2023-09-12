@@ -122,12 +122,12 @@ const Catalog = () => {
 
     return (
         <Fragment>
-            <div className='flex gap-10 bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 pl-20 pr-20 pt-20 mb-[-95px]'>
-                <div className='flex flex-col gap-10'>
+            <div className='flex gap-10 bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 lg:pl-20 lg:pr-20 pt-20 mb-[-65px] px-5'>
+                <div className='flex flex-col items-center justify-center gap-10'>
                     <h2 className='text-3xl font-semibold'>
                     Каталог локалізованих ігор
                     </h2>
-                    <div className='flex items-center justify-between gap-3'>
+                    <div className='flex flex-wrap items-center justify-center gap-3'>
                         <select
                             className='px-6 py-2 border border-gray-200 rounded-md bg-slate-800'
                             onChange={handleSortChange}
@@ -144,7 +144,7 @@ const Catalog = () => {
                             <input
                                 type='text'
                                 placeholder='Введіть назву гри'
-                                className='px-6 py-2 mr-2 border rounded-lg text-slate-400 w-96'
+                                className='px-6 py-2 mr-2 border rounded-lg text-slate-400 lg:w-96'
                                 value={searchQuery}
                                 onChange={handleInputChange}
                             />
@@ -155,12 +155,12 @@ const Catalog = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='flex flex-wrap gap-5'>
+                    <div className='flex flex-wrap items-center justify-center gap-5'>
                         {games?.map((game) => (
                             <Card key={data.id} {...game} />
                         ))}
                     </div>
-                    <div className='flex items-center justify-center my-4'>
+                    <div className='flex items-center justify-center'>
                         <ul className='flex space-x-5'>
                             {displayPageNumbers().map((pageNumber, index) => (
                                 <li key={index}>

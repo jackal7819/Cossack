@@ -8,7 +8,7 @@ import LocalizationTypeFilter from './LocalizationTypeFilter';
 const Sidebar = () => {
 
     return (
-        <div className='w-[950px] text-slate-300'>
+        <div className='w-[950px] text-slate-300 hidden'>
             <h2 className='mb-4 text-xl font-semibold'>Фільтри</h2>
             <PlatformFilter/>
             <YearRangeSelector />
