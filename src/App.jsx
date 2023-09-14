@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         ),
         children: [
             { index: true, element: <Home /> },
-            { path: 'card', element: <FullCard /> },
+            { path: '/game/:gameId', element: <FullCard /> },
             { path: 'profile', element: <Profile /> },
             { path: 'login', element: <Login /> },
             { path: 'restore', element: <Restore /> },

@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className='bg-footer max-w-[1440px] m-auto'>
-            <div className='flex flex-wrap items-center justify-center gap-20 pt-20 pl-20 pr-20 bg-black bg-opacity-50 xl:justify-between xl:pt-72 text-slate-300 xl:gap-80'>
+            <div className='flex flex-wrap items-center justify-center gap-20 pt-20 pl-20 pr-20 bg-black bg-opacity-50 xl:justify-between xl:pt-40 text-slate-300 xl:gap-80'>
                 <div className='flex flex-col items-center justify-center gap-4 xl:items-start'>
                     <Link className='flex items-center gap-2' to={'/#banner'}>
                         <img
