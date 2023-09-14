@@ -6,6 +6,7 @@ const About = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    
     const isWideScreen = window.innerWidth >= 1280;
     
     return (

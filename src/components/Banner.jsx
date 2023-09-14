@@ -33,7 +33,7 @@ const Banner = () => {
     return (
         <div className='flex items-center justify-center max-w-[1440px] h-screen m-auto bg-banner px-5' id='banner'>
             <div className='inline-flex flex-col items-center gap-10 tracking-widest text-slate-100'>
-                <div className='flex flex-col items-center self-stretch justify-center h-32 text-center'>
+                <div className='flex flex-col items-center self-stretch justify-center text-center'>
                     <p className='mb-5 text-4xl font-bold uppercase'>
                         Геймплей,
                         <span className='text-yellow-400'> наповнений</span>
@@ -62,7 +62,7 @@ const Banner = () => {
                         </button>
                     </div>
                 </div>
-                <div className='flex gap-20 text-xl leading-7 text-red-50'>
+                <div className='flex gap-10 leading-7 md:gap-20 md:text-xl text-red-50'>
                     <div className='flex flex-col items-center justify-center gap-4'>
                         <p className='text-4xl font-bold leading-10'>
                             {data.official}
