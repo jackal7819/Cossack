@@ -5,16 +5,17 @@ import { useQuery } from '@tanstack/react-query';
 import Footer from '../components/Footer';
 import ReactPlayer from 'react-player/youtube';
 import GameSummary from '../components/GameSummary';
+import Similar from '../components/Similar';
 
 const FullCard = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     const { gameId } = useParams();
 
     const { isLoading, isError, error, data } = useQuery(
-        ['game'],
+        ['game', gameId],
         () => axios.get(`/api/games/${gameId}`),
         { select: ({ data }) => data.gamePage }
     );
@@ -33,7 +34,7 @@ const FullCard = () => {
 
     return (
         <Fragment>
-            <div className='flex flex-col items-center gap-48 bg-black max-w-[1440px] bg-opacity-50 m-auto text-slate-100 pl-10 pr-10 md:pl-20 md:pr-20 md:pt-20 pt-10'>
+            <div className='flex flex-col items-center gap-10 bg-black max-w-[1440px] bg-opacity-50 m-auto text-slate-100 pl-10 pr-10 md:pl-20 md:pr-20 md:pt-20 pt-10'>
                 <div className='flex flex-col gap-10'>
                     <h2 className='text-xl font-bold text-center uppercase lg:text-3xl'>
                         {data.name}
@@ -42,7 +43,11 @@ const FullCard = () => {
                         <div className='flex flex-col items-center gap-10 lg:flex-row'>
                             <div className='w-full aspect-video'>
                                 <ReactPlayer
-                                    url={data.videos[0] ? data.videos[0] : 'https://www.youtube.com/watch?v=lowuhXBHxAw'}
+                                    url={
+                                        data.videos[0]
+                                            ? data.videos[0]
+                                            : 'https://www.youtube.com/watch?v=lowuhXBHxAw'
+                                    }
                                     width='100%'
                                     height='100%'
                                     controls
@@ -66,6 +71,7 @@ const FullCard = () => {
                         </div>
                     </div>
                 </div>
+                <Similar data={data} />
             </div>
             <Footer />
         </Fragment>

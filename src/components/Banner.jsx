@@ -10,7 +10,7 @@ const Banner = () => {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState('');
     const { isLoading, isError, error, data } = useQuery(
-        ['catalog'],
+        ['localizations'],
         () => axios.get('/api/games/localizations-count'),
         { select: ({ data }) => data }
     );
@@ -65,21 +65,21 @@ const Banner = () => {
                 <div className='flex gap-10 leading-7 md:gap-20 md:text-xl text-red-50'>
                     <div className='flex flex-col items-center justify-center gap-4'>
                         <p className='text-4xl font-bold leading-10'>
-                            {data.official}
+                            {data.audio}
+                        </p>
+                        <p>Озвучення</p>
+                    </div>
+                    <div className='flex flex-col items-center justify-center gap-4'>
+                        <p className='text-4xl font-bold leading-10'>
+                            {data.interface}
                         </p>
                         <p>Інтерфейс</p>
                     </div>
                     <div className='flex flex-col items-center justify-center gap-4'>
                         <p className='text-4xl font-bold leading-10'>
-                            {data.semiOfficial}
+                            {data.subtitles}
                         </p>
                         <p>Текст</p>
-                    </div>
-                    <div className='flex flex-col items-center justify-center gap-4'>
-                        <p className='text-4xl font-bold leading-10'>
-                            {data.nonOfficial}
-                        </p>
-                        <p>Озвучення</p>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import About from './pages/About';
 import Catalog from './pages/Catalog';
+import Error from './pages/Error';
 import Faq from './pages/FAQ';
 import { FilterProvider } from './components/FilterContext';
 import FullCard from './pages/FullCard';
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
             { path: 'catalog', element: <Catalog /> },
             { path: 'about', element: <About /> },
             { path: 'faq', element: <Faq /> },
+            { path: '*', element: <Error /> },
         ],
     },
 ]);
