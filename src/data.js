@@ -13,7 +13,7 @@ export const platforms = [
 
 export const developerCountryType = [
     { id: 1, label: 'Увесь світ' },
-    { id: 2, label: 'Лише українськи' },
+    { id: 2, label: 'Лише українські' },
     { id: 3, label: 'Окрім російських' },
 ];
 

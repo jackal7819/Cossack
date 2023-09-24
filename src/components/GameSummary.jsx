@@ -1,4 +1,6 @@
-const GameSummary = ({data}) => {
+import { platforms } from '../data';
+
+const GameSummary = ({ data }) => {
     // Sort Localizations
 
     const language = 'Ukrainian';
@@ -43,11 +45,24 @@ const GameSummary = ({data}) => {
                 </div>
                 <div className='flex gap-5'>
                     <p>Платформи:</p>
-                    <div className='flex gap-3'>
+                    {/* <div className='flex gap-3'>
                         <img src='/assets/xbox.svg' alt='xbox' />
                         <img src='/assets/nintendo.svg' alt='nintendo' />
                         <img src='/assets/pc.svg' alt='pc' />
                         <img src='/assets/playstation.svg' alt='playstation' />
+                    </div> */}
+                    <div className='flex gap-3'>
+                        {platforms.map(
+                            (platform) =>
+                                data.platforms.includes(platform) && (
+                                    <img
+                                        key={platform}
+                                        src={`/assets/${platform.toLowerCase().replace(/\s+/g, '-').replace(/\|/g, '')}.svg`}
+                                        alt={platform}
+                                        className='w-8 h-8'
+                                    />
+                                )
+                        )}
                     </div>
                 </div>
                 <div className='flex gap-12'>
