@@ -173,10 +173,14 @@ const Catalog = () => {
 						</div>
 					</div>
 					<div className='flex gap-10'>
-						<div className='flex flex-wrap items-center justify-center gap-5'>
-							{games?.map((game) => (
-								<Card key={game.id} {...game} />
-							))}
+						<div className={games?.length > 0 ? 'flex flex-wrap items-center justify-center gap-5' : 'flex flex-wrap justify-center gap-5'}>
+							{games?.length > 0 ? (
+								games.map((game) => (
+									<Card key={game.id} {...game} />
+								))
+							) : (
+								<p className='w-4/5 mx-auto text-3xl'>Ігри не знайдено за вашим запитом.</p>
+							)}
 						</div>
 						{isSidebarOpen && (
 							<Sidebar onFilterChange={handleFilterChange} />
