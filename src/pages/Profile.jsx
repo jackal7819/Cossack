@@ -1,6 +1,6 @@
 import '../index.css';
 
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
@@ -69,7 +69,7 @@ const Profile = () => {
                     </div>
                     <div className='flex gap-5'>
                         {games.map((game) => (
-                            <Card key={games.id} {...game} />
+                            <Card key={game.id} {...game} />
                         ))}
                     </div>
                 </div>

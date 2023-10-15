@@ -13,7 +13,7 @@ const Similar = ({data }) => {
             </div>
             <div className='flex flex-wrap items-center justify-center gap-5'>
                 {data.similarGames.map((game) => (
-                    <Card key={data.id} {...game} />
+                    <Card key={game.id} {...game} />
                 ))}
             </div>
         </div>

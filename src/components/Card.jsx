@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 const Card = ({ name, developers, releaseDate, rating, cover, id }) => {
     return (

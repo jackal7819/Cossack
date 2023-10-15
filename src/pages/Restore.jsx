@@ -1,7 +1,5 @@
 import '../index.css';
 
-import React from 'react';
-
 const Restore = () => {
     return (
         <div className='bg-footer max-w-[1440px] m-auto'>

@@ -2,7 +2,6 @@ import DeveloperCountryFilter from './DeveloperCountryFilter';
 import GenreFilter from './GenreFilter';
 import LocalizationTypeFilter from './LocalizationTypeFilter';
 import PlatformFilter from './PlatformFilter';
-import React from 'react';
 import YearRangeSelector from './YearRangeSelector';
 
 const Sidebar = () => {

@@ -1,6 +1,6 @@
 import '../index.css';
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const About = () => {
     useEffect(() => {

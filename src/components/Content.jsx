@@ -1,6 +1,5 @@
 import Bestsellers from './Bestsellers';
 import Novelties from './Novelties';
-import React from 'react';
 
 const Content = () => {
     return (

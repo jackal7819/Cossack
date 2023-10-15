@@ -51,7 +51,7 @@ const GameSummary = ({ data }) => {
                         <img src='/assets/pc.svg' alt='pc' />
                         <img src='/assets/playstation.svg' alt='playstation' />
                     </div> */}
-                    <div className='flex gap-3'>
+                    <div className='flex flex-wrap gap-3'>
                         {platforms.map(
                             (platform) =>
                                 data.platforms.includes(platform) && (

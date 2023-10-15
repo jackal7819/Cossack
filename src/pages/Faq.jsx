@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const Faq = () => {
     useEffect(() => {
@@ -13,7 +13,7 @@ const Faq = () => {
                     <ol class='list-decimal flex flex-col gap-5 bg-opacity-50  py-14 rounded-3xl align-items-center lg:px-28 text-slate-100 px-5'>
                         <li>
                             <strong>Що таке локалізація в іграх?</strong>
-                            <ul class='list-disc ml-5'>
+                            <ul className='ml-5 list-disc'>
                                 <li>
                                     Локалізація в іграх - це процес адаптації
                                     гри для мови та культури конкретної

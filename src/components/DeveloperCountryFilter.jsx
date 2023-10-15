@@ -1,4 +1,3 @@
-import React from 'react';
 import { developerCountryType } from '../data';
 import { useFilterContext } from './useFilterContext';
 
