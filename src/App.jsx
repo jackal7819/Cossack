@@ -14,33 +14,33 @@ import Registration from './pages/Registration';
 import Restore from './pages/Restore';
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: (
-            <FilterProvider>
-                <Header />
-                <div>
-                    <Outlet />
-                </div>
-            </FilterProvider>
-        ),
-        children: [
-            { index: true, element: <Home /> },
-            { path: '/game/:gameId', element: <FullCard /> },
-            { path: 'profile', element: <Profile /> },
-            { path: 'login', element: <Login /> },
-            { path: 'restore', element: <Restore /> },
-            { path: 'registration', element: <Registration /> },
-            { path: 'catalog', element: <Catalog /> },
-            { path: 'about', element: <About /> },
-            { path: 'faq', element: <Faq /> },
-            { path: '*', element: <Error /> },
-        ],
-    },
+	{
+		path: '/',
+		element: (
+			<FilterProvider>
+				<Header />
+				<div>
+					<Outlet />
+				</div>
+			</FilterProvider>
+		),
+		children: [
+			{ index: true, element: <Home /> },
+			{ path: '/game/:gameId', element: <FullCard /> },
+			{ path: 'profile', element: <Profile /> },
+			{ path: 'login', element: <Login /> },
+			{ path: 'restore', element: <Restore /> },
+			{ path: 'registration', element: <Registration /> },
+			{ path: 'catalog', element: <Catalog /> },
+			{ path: 'about', element: <About /> },
+			{ path: 'faq', element: <Faq /> },
+			{ path: '*', element: <Error /> },
+		],
+	},
 ]);
 
 const App = () => {
-    return <RouterProvider router={router} />;
+	return <RouterProvider router={router} />;
 };
 
 export default App;
