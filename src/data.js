@@ -60,8 +60,17 @@ export const localizationTypes = [
     { id: 3, en: 'Audio', uk: 'Озвучення' },
 ];
 
+// export const orderByOptions = {
+//     rating: 'Сортувати за рейтингом',
+//     name: 'Сортувати за назвою',
+//     date: 'Сортувати за датою',
+// };
+
 export const orderByOptions = {
-    rating: 'Сортувати за рейтингом',
-    name: 'Сортувати за назвою',
-    date: 'Сортувати за датою',
+    ratingAsc: 'Сортувати за рейтингом ↑',
+    ratingDesc: 'Сортувати за рейтингом ↓',
+    nameAsc: 'Сортувати за назвою ↑',
+    nameDesc: 'Сортувати за назвою ↓',
+    dateAsc: 'Сортувати за датою ↑',
+    dateDesc: 'Сортувати за датою ↓',
 };

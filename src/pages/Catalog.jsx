@@ -13,7 +13,8 @@ const Catalog = () => {
 	const location = useLocation();
 	const { selectedFilters, setSelectedFilters } = useFilterContext();
 	const [currentPage, setCurrentPage] = useState(1);
-	const [orderBy, setOrderBy] = useState('rating');
+	const [pageNumberInput, setPageNumberInput] = useState('1');
+	const [orderBy, setOrderBy] = useState('ratingDesc');
 	const [searchQuery, setSearchQuery] = useState('');
 	const [currentSearchQuery, setCurrentSearchQuery] = useState('');
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,7 +38,15 @@ const Catalog = () => {
 	}, [location]);
 
 	const handlePageChange = (pageNumber) => {
+		if (pageNumber === '...') {
+			return;
+		}
 		setCurrentPage(pageNumber);
+	};
+
+	const handlePageNumberInput = (e) => {
+		const inputNumber = e.target.value;
+		setPageNumberInput(inputNumber);
 	};
 
 	const handleSortChange = (event) => {
@@ -89,6 +98,18 @@ const Catalog = () => {
 		setSearchQuery(event.target.value);
 	};
 
+	const goToPage = () => {
+		const pageNumber = parseInt(pageNumberInput);
+		if (
+			!isNaN(pageNumber) &&
+			pageNumber >= 1 &&
+			pageNumber <= data.pagesCount
+		) {
+			handlePageChange(pageNumber);
+			setPageNumberInput('');
+		}
+	};
+
 	if (isLoading) {
 		return (
 			<div className='flex items-center justify-center bg-footer h-screen-minus-menu max-w-[1440px] m-auto'>
@@ -102,9 +123,9 @@ const Catalog = () => {
 	}
 
 	const games = data.gameCards;
+	const totalPages = data.pagesCount;
 
 	const displayPageNumbers = () => {
-		const totalPages = data.pagesCount;
 		const visiblePages = 1;
 
 		const pageNumbers = [];
@@ -134,7 +155,7 @@ const Catalog = () => {
 
 	return (
 		<Fragment>
-			<div className='bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 lg:pl-20 lg:pr-20 pt-20 mb-[-65px] px-5 relative'>
+			<div className='bg-black max-w-[1440px] bg-opacity-50 mx-auto text-slate-300 lg:pl-20 lg:pr-20 pt-20 px-5 relative'>
 				<div className='flex flex-col items-center justify-center gap-10'>
 					<h2 className='text-3xl font-semibold'>
 						Каталог локалізованих ігор
@@ -161,7 +182,7 @@ const Catalog = () => {
 							<input
 								type='text'
 								placeholder='Введіть назву гри'
-								className='px-6 py-2 mr-2 border rounded-lg text-slate-400 lg:w-96'
+								className='px-6 py-2 mr-2 border rounded-lg text-slate-700 lg:w-96'
 								value={searchQuery}
 								onChange={handleInputChange}
 							/>
@@ -172,17 +193,19 @@ const Catalog = () => {
 							</button>
 						</div>
 					</div>
-					<div className='flex gap-10'>
-						<div className={games?.length > 0 ? 'flex flex-wrap items-center justify-center gap-5' : 'flex flex-wrap justify-center gap-5'}>
+					<div className='flex justify-between w-full gap-10'>
+						<div className='flex flex-wrap justify-center flex-1 gap-5'>
 							{games?.length > 0 ? (
 								games.map((game) => (
 									<Card key={game.id} {...game} />
 								))
 							) : (
-								<p className='w-4/5 mx-auto text-3xl'>Ігри не знайдено за вашим запитом.</p>
+								<p className='mx-auto mt-10 text-3xl h-[28vh]'>
+									Ігри не знайдено за вашим запитом
+								</p>
 							)}
 						</div>
-						{isSidebarOpen && (
+						{isSidebarOpen && games?.length > 0 && (
 							<Sidebar onFilterChange={handleFilterChange} />
 						)}
 					</div>
@@ -205,6 +228,17 @@ const Catalog = () => {
 								</li>
 							))}
 						</ul>
+						{totalPages > 1 && (
+							<div>
+								<input
+									type='text'
+									value={pageNumberInput}
+									onChange={handlePageNumberInput}
+									className='w-10 p-1 ml-2 mr-2 rounded text-slate-700'
+								/>
+								<button onClick={goToPage}>Перейти</button>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

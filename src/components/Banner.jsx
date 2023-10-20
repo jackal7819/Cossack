@@ -58,7 +58,7 @@ const Banner = () => {
 						<input
 							type='text'
 							placeholder='Введіть назву гри'
-							className='px-6 py-2 mr-2 border rounded-lg xl:w-96 text-slate-400'
+							className='px-6 py-2 mr-2 border rounded-lg xl:w-96 text-slate-700'
 							value={searchQuery}
 							onChange={handleInputChange}
 						/>
