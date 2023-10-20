@@ -3,10 +3,19 @@ import GenreFilter from './GenreFilter';
 import LocalizationTypeFilter from './LocalizationTypeFilter';
 import PlatformFilter from './PlatformFilter';
 import YearRangeSelector from './YearRangeSelector';
+import { useFilterContext } from './useFilterContext';
 
 const Sidebar = () => {
+    const { setSelectedFilters } = useFilterContext();
+    
 	const CancelFilters = () => {
-		window.location.reload();
+		setSelectedFilters({
+            selectedPlatforms: [],
+            selectedDeveloperCountryType: 1,
+            selectedGenres: [],
+            selectedLocalizationTypes: [],
+            selectedYearRange: [1990, 2023],
+        })
 	};
 
 	return (
