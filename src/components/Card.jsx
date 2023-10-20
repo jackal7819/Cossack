@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ name, developers, releaseDate, rating, cover, id }) => {
     return (
-        <div className='flex flex-col justify-between h-auto border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100'>
+        <div className='flex flex-col justify-between h-auto duration-300 border rounded-lg shadow w-80 bg-slate-300 bg-opacity-20 border-slate-100 hover:translate-y-3'>
             <Link to={`/game/${id}`} className='flex px-3 pt-3'>
                 {cover ? (
                     <img

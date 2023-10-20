@@ -11,20 +11,20 @@ const Header = () => {
                     alt='logo'
                     className='border rounded-full border-slate-600'
                 />
-                <p className='hidden text-base leading-snug uppercase text-sky-300 sm:inline'>
+                <p className='hidden text-base leading-snug uppercase text-sky-300 sm:inline hover:underline hover:underline-offset-4'>
                     Cossack
                 </p>
             </Link>
             <div className='flex items-center justify-start gap-5 sm:gap-14'>
                 <Link
-                    className='text-base font-light leading-snug'
+                    className='text-base font-light leading-snug hover:underline hover:underline-offset-4'
                     to={'/catalog'}>
                     Каталог
                 </Link>
-                <Link className='text-base leading-snug' to={'/about'}>
+                <Link className='text-base leading-snug hover:underline hover:underline-offset-4' to={'/about'}>
                     Про <span className='uppercase text-sky-300'>Cossack</span> 
                 </Link>
-                <Link className='text-base font-light leading-snug' to={'/faq'}>
+                <Link className='text-base font-light leading-snug hover:underline hover:underline-offset-4' to={'/faq'}>
                     FAQ
                 </Link>
             </div>
