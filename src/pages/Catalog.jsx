@@ -6,7 +6,7 @@ import axios from '../axios';
 import { orderByOptions } from '../data';
 import { useFilterContext } from '../components/useFilterContext';
 import { useQuery } from '@tanstack/react-query';
-import { useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Catalog = () => {
 	const location = useLocation();
@@ -35,12 +35,23 @@ const Catalog = () => {
 		setSearchQuery(query);
 		setCurrentSearchQuery(query);
 	}, [location]);
-
+	
+	useEffect(() => {
+		const currentPageFromSession = sessionStorage.getItem('currentPage');
+		if (currentPageFromSession) {
+			setCurrentPage(parseInt(currentPageFromSession, 10));
+		} else {
+			setCurrentPage(1);
+		}
+	}, []);
+	console.log(currentPage);
+	
 	const handlePageChange = (pageNumber) => {
 		if (pageNumber === '...') {
 			return;
 		}
 		setCurrentPage(pageNumber);
+		sessionStorage.setItem('currentPage', currentPage.toString());
 	};
 
 	const handlePageNumberInput = (e) => {
