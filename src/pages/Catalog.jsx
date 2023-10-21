@@ -8,11 +8,12 @@ import { orderByOptions } from '../data';
 import { useFilterContext } from '../components/useFilterContext';
 import { useLocation } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useSessionStorage } from 'react-use';
 
 const Catalog = () => {
 	const location = useLocation();
 	const { selectedFilters, setSelectedFilters } = useFilterContext();
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useSessionStorage('currentPage', 1);
 	const [pageNumberInput, setPageNumberInput] = useState('1');
 	const [orderBy, setOrderBy] = useState('ratingDesc');
 	const [searchQuery, setSearchQuery] = useState('');
@@ -44,7 +45,7 @@ const Catalog = () => {
 		} else {
 			setCurrentPage(1);
 		}
-	}, []);
+	}, [setCurrentPage]);
 	
 	const handlePageChange = (pageNumber) => {
 		if (pageNumber === '...') {
