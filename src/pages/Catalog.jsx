@@ -1,12 +1,13 @@
 import { Fragment, useEffect, useState } from 'react';
+
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import axios from '../axios';
 import { orderByOptions } from '../data';
 import { useFilterContext } from '../components/useFilterContext';
-import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 
 const Catalog = () => {
 	const location = useLocation();
@@ -44,7 +45,6 @@ const Catalog = () => {
 			setCurrentPage(1);
 		}
 	}, []);
-	console.log(currentPage);
 	
 	const handlePageChange = (pageNumber) => {
 		if (pageNumber === '...') {
@@ -54,8 +54,8 @@ const Catalog = () => {
 		sessionStorage.setItem('currentPage', currentPage.toString());
 	};
 
-	const handlePageNumberInput = (e) => {
-		const inputNumber = e.target.value;
+	const handlePageNumberInput = (event) => {
+		const inputNumber = event.target.value;
 		setPageNumberInput(inputNumber);
 	};
 
@@ -107,7 +107,6 @@ const Catalog = () => {
 	const handleKeyDown = (event) => {
 		if (event.key === 'Enter') {
 			handleSearch();
-			console.log('Поиск начался');
 		}
 	};
 
