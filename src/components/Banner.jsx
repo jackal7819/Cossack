@@ -19,6 +19,12 @@ const Banner = () => {
 		navigate(`/catalog?search=${searchQuery}`);
 	};
 
+	const handleKeyDown = (event) => {
+		if (event.key === 'Enter') {
+			handleSearch();
+		}
+	};
+
 	const handleInputChange = (event) => {
 		setSearchQuery(event.target.value);
 	};
@@ -61,6 +67,7 @@ const Banner = () => {
 							className='px-6 py-2 mr-2 border rounded-lg xl:w-96 text-slate-700'
 							value={searchQuery}
 							onChange={handleInputChange}
+							onKeyDown={handleKeyDown}
 						/>
 						<button
 							className='px-6 py-2 rounded-lg bg-sky-600'

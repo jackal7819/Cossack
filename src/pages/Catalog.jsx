@@ -1,13 +1,12 @@
 import { Fragment, useEffect, useState } from 'react';
-
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Sidebar from '../components/Sidebar';
 import axios from '../axios';
 import { orderByOptions } from '../data';
 import { useFilterContext } from '../components/useFilterContext';
-import { useLocation } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useLocation} from 'react-router-dom';
 
 const Catalog = () => {
 	const location = useLocation();
@@ -92,6 +91,13 @@ const Catalog = () => {
 	const handleSearch = () => {
 		setCurrentSearchQuery(searchQuery);
 		setCurrentPage(1);
+	};
+
+	const handleKeyDown = (event) => {
+		if (event.key === 'Enter') {
+			handleSearch();
+			console.log('Поиск начался');
+		}
 	};
 
 	const handleInputChange = (event) => {
@@ -185,6 +191,7 @@ const Catalog = () => {
 								className='px-6 py-2 mr-2 border rounded-lg text-slate-700 lg:w-96'
 								value={searchQuery}
 								onChange={handleInputChange}
+								onKeyDown={handleKeyDown}
 							/>
 							<button
 								className='px-6 py-2 rounded-lg bg-sky-600'
