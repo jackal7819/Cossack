@@ -256,7 +256,7 @@ const Catalog = () => {
 							<div>
 								<input
 									type='text'
-									placeholder='Стр'
+									placeholder='Ст'
 									value={pageNumberInput}
 									onChange={handlePageNumberInput}
 									onKeyDown={handleKeyDownPage}
