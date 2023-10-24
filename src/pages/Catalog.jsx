@@ -14,7 +14,7 @@ const Catalog = () => {
 	const location = useLocation();
 	const { selectedFilters, setSelectedFilters } = useFilterContext();
 	const [currentPage, setCurrentPage] = useSessionStorage('currentPage', 1);
-	const [pageNumberInput, setPageNumberInput] = useState('1');
+	const [pageNumberInput, setPageNumberInput] = useState(null);
 	const [orderBy, setOrderBy] = useState('ratingDesc');
 	const [searchQuery, setSearchQuery] = useState('');
 	const [currentSearchQuery, setCurrentSearchQuery] = useState('');
@@ -124,6 +124,12 @@ const Catalog = () => {
 		) {
 			handlePageChange(pageNumber);
 			setPageNumberInput('');
+		}
+	};
+
+	const handleKeyDownPage = (event) => {
+		if (event.key === 'Enter') {
+			goToPage();
 		}
 	};
 
@@ -250,9 +256,11 @@ const Catalog = () => {
 							<div>
 								<input
 									type='text'
+									placeholder='Стр'
 									value={pageNumberInput}
 									onChange={handlePageNumberInput}
-									className='w-10 p-1 ml-2 mr-2 rounded text-slate-700'
+									onKeyDown={handleKeyDownPage}
+									className='w-10 p-1 ml-2 mr-2 text-center rounded text-slate-700'
 								/>
 								<button onClick={goToPage}>Перейти</button>
 							</div>
